@@ -1,0 +1,89 @@
+/* Giving a background-color to the .navigation  container. */
+.navigation  { 
+	margin: 48px 0;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+.navigation:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+.navigation ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	float: right;
+	}
+	
+/* Positioning the .navigation igation items inline */
+.navigation ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: none;
+	}
+
+.navigation ul li.current-menu-item,
+.navigation ul li.current-menu-parent {
+	background-color: #ccc;
+}
+
+/* Styling the links */
+.navigation a {
+	display:block;
+	padding:0 10px;	
+	line-height: 30px;
+	text-decoration:none;
+}
+
+/* Background color change on Hover */
+.navigation a:hover { 
+	background-color: #ccc; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+.navigation ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of ".navigation  a" */
+	top: 30px; 
+	background: #fff;
+}
+	
+/* Display Dropdowns on Hover */
+.navigation ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+.navigation ul ul li {
+	width:200px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+.navigation ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of ".navigation  ul ul li" */ 
+	left:200px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol 
+li > a:after { content:  '+'; }
+li > a:only-child:after { content: ''; }
+*/

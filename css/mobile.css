@@ -1,0 +1,60 @@
+
+.mobileshow {
+  display: none;
+}
+
+.menu-btn {
+  float: right;
+  margin-top: 33px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  text-align: right;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+a.mobilepagebtn {
+  color: #000;
+}
+
+
+@media only screen 
+and (max-width : 768px) {
+
+  .new {
+    margin-left:10px;
+  }
+
+  .mobileshow {
+    display: block;
+  }
+
+  .mobilehide {
+    display: none !important;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .menu li a {
+    color: #fff;
+  }
+
+  .page-content {
+    padding:0; 
+  }
+
+
+}
+
+@media only screen 
+and (max-width : 421px) {
+  
+  .mobileshow {
+    display: inline;
+  }
+
+  
+
+}
