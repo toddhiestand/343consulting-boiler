@@ -36,6 +36,13 @@
     color: #FFF;
 }
 
+.pushy ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+
 /* Menu Movement */
 .pushy-right{
     right: 0;
