@@ -99,7 +99,7 @@ add_theme_support('automatic-feed-links');
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
-  return '[...] <div class="read-more"><a href="'. get_permalink($post->ID) . '"> Read More</a></div>';
+  return '[...] <div class="read-more"><a class="button small" href="'. get_permalink($post->ID) . '"> Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
