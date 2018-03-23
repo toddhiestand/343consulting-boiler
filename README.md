@@ -1,8 +1,6 @@
 # pure-boilerplate
 
-Our starting point, baseline theme for 343 Consulting WordPress projects.
-
-For more info, contact todd@343consulting.com 
+A starting point, baseline theme for 343 Consulting WordPress projects.
 
 ## This theme is indebted to a few key resournces
 
@@ -13,3 +11,9 @@ For more info, contact todd@343consulting.com
 - Advanced Custom Fields
 - Gravity Forms
 - Custom Editor Styles 
+
+
+## Contact
+- 343 Consulting helps nonprofits navigate storytelling, fundraising and technology
+- For more info, contact todd@343consulting.com 
+- Visit 343consulting's website at https://www.343consulting.com
