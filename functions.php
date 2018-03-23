@@ -7,6 +7,9 @@ require_once(__DIR__ . '/lib/taxonomies.php');
 // Includes our custom post types
 require_once(__DIR__ . '/lib/post-types.php');
 
+// Includes required plugins file
+require_once dirname( __FILE__ ) . '/lib/plugins.php';
+
 // Includes our custom post types
 // require_once(__DIR__ . '/lib/fields.php');
 
