@@ -323,7 +323,7 @@ blockquote {
 
 
 .article {
-	padding: 75px 0 0 0;
+	padding: 0 0 75px 0 !important;
 
 }
 

@@ -3,7 +3,7 @@
 <div class="wide-container">
 	<div class="container row">		
 		<main role="main" class="row gutters">
-			<div class="col span_16">
+			<div class="col span_20 centered">
 				<div class="row">
 		      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<div class="article span_24 featured-article">
@@ -24,7 +24,6 @@
 				<?php endif; ?>
 				</div>
 			</div>	
-			<?php get_sidebar();?>
 		</main>
 </div>
 
