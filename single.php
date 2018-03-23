@@ -24,7 +24,7 @@
 				<?php endif; ?>
 				</div>
 			</div>	
-			<?get_template_part('sidebar-single');?>
+			<?php get_sidebar();?>
 		</main>
 </div>
 
