@@ -277,6 +277,19 @@ video {
 	margin-bottom: 50px;
 }
 
+/* SERMON POST TYPE STYLES */ 
+
+
+.dropdown-container h3 {
+	font-size: 12px;
+	text-align: center;
+	line-height: 1;
+	margin:20px 0;
+}
+
+.dropdown-container select {
+	width: 100%;
+}
 
 
 /* PAGE AND POST STYLES */ 
@@ -304,9 +317,26 @@ blockquote {
 	margin-top: 50px;
 }
 
-.article {
-	padding: 60px 0 0 0;
+.dropdown-container {
+	border-bottom: 1px solid #f0f0f0;
 }
+
+
+.article {
+	padding: 75px 0 0 0;
+
+}
+
+.meta-section {
+	margin-top: 20px;
+ 
+}
+
+.meta {
+	font-size: .9em;
+	margin:0;
+}
+
 
 .prevnext {
 	text-align: center;
