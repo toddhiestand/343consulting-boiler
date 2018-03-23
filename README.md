@@ -2,7 +2,18 @@
 
 A starting point, baseline theme for 343 Consulting WordPress projects.
 
-## This theme is indebted to a few key resournces
+## Advanced Custom Fields
+
+- Download an import of advanced custom fields here: https://github.com/toddhiestand/343consulting-boiler/blob/master/lib/acf-export-2018-03-23.json
+
+## Key Features
+- Sermons archive for churches
+- Content section based page layouts using Advanced Custom Fields
+- Multiple header options (video header, image header, basic header)
+- Clean responsive mobile styles, mobile menu 
+- This theme can be used out of the box but will require extra styles and page sections to be customized more fully 
+
+## This theme is indebted to a few key resources
 
 - Responsive Grid system: http://responsive.gs/
 - Pushy Menu: https://github.com/christophery/pushy
