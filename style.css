@@ -64,12 +64,11 @@ a.button, input.button, input[type="submit"] {
 	-webkit-border-radius: 2px; 
 	-moz-border-radius: 2px; 
 	border-radius: 2px; 
-	background: #1b8c8c;
+	background: #ffce00;
 	padding: 14px 40px; 
 	color: #fff; 
 	font-weight: 600; 
 	text-transform: uppercase; 
-	font-style: italic;
 	position: relative; 
 	border: none; 
 	top: 0; 
@@ -94,6 +93,8 @@ a.button, input.button, input[type="submit"] {
 	-o-transition: background 0.3s ease-in-out; 
 	transition: background 0.3s ease-in-out; 
 }
+
+
 
 /* LOGO */
 
