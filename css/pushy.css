@@ -7,7 +7,7 @@
 
 .pushy{
     position: fixed;
-    width: 200px;
+    width: 300px;
     height: 100%;
     top: 0;
     z-index: 9999;
@@ -23,7 +23,7 @@
 
 .pushy a{
     display: block;
-    width: 200px;
+    width: 300px;
     color: #fff;
     padding: 15px 30px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -46,20 +46,20 @@
 /* Menu Movement */
 .pushy-right{
     right: 0;
-    -webkit-transform: translate3d(200px,0,0);
-    -moz-transform: translate3d(200px,0,0);
-    -ms-transform: translate3d(200px,0,0);
-    -o-transform: translate3d(200px,0,0);
-    transform: translate3d(200px,0,0);
+    -webkit-transform: translate3d(300px,0,0);
+    -moz-transform: translate3d(300px,0,0);
+    -ms-transform: translate3d(300px,0,0);
+    -o-transform: translate3d(300px,0,0);
+    transform: translate3d(300px,0,0);
 }
 
 .pushy-left{
     right:0;
-    -webkit-transform: translate3d(200px,0,0);
-    -moz-transform: translate3d(200px,0,0);
-    -ms-transform: translate3d(200px,0,0);
-    -o-transform: translate3d(200px,0,0);
-    transform: translate3d(200px,0,0);
+    -webkit-transform: translate3d(300px,0,0);
+    -moz-transform: translate3d(300px,0,0);
+    -ms-transform: translate3d(300px,0,0);
+    -o-transform: translate3d(300px,0,0);
+    transform: translate3d(300px,0,0);
 }
 
 .pushy-open{
@@ -72,11 +72,11 @@
 }
 
 .container-push, .push-push{
-    -webkit-transform: translate3d(-200px,0,0);
-    -moz-transform: translate3d(-200px,0,0);
-    -ms-transform: translate3d(-200px,0,0);
-    -o-transform: translate3d(-200px,0,0);
-    transform: translate3d(-200px,0,0);
+    -webkit-transform: translate3d(-300px,0,0);
+    -moz-transform: translate3d(-300px,0,0);
+    -ms-transform: translate3d(-300px,0,0);
+    -o-transform: translate3d(-300px,0,0);
+    transform: translate3d(-300px,0,0);
 }
 
 /* Menu Transitions */
@@ -104,7 +104,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    right: 200px;    
+    right: 300px;    
     z-index: 99999;
 }
 
