@@ -2,10 +2,15 @@
     </div>
 </div>
 
-<div class="wide-container">
+<div class="wide-container baseline">
     <div class="container">
-        <div class="row">
-            <p class="smalltext">&copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?></p>
+        <div class="row gutters">
+          <div class="col span_12"> 
+            <p>&copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?></p>
+         	</div>
+         	<div class="col span_12 by343"> 
+            <p class="by">Site by <a target="_blank" href="https://www.343consulting.com">343 Consulting</a></p>
+          </div>
         </div>
     </div>
 </div>
