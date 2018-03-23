@@ -47,7 +47,7 @@
         <?php } ?>
         <?php if( have_rows('two_column_repeater') ): ?>
           <?php while( have_rows('two_column_repeater') ): the_row(); ?>
-            <div class="row gutters">
+            <div class="row gutters paddingbottom">
               <div class="col span_12">
                 <?php the_sub_field('column_1'); ?>
               </div>     
@@ -78,7 +78,7 @@
         <?php } ?>
         <?php if( have_rows('three_column_repeater') ): ?>
           <?php while( have_rows('three_column_repeater') ): the_row(); ?>
-            <div class="row gutters">
+            <div class="row gutters paddingbottom">
               <div class="col span_8">
                 <?php the_sub_field('column_1'); ?>
               </div>     
@@ -113,7 +113,7 @@
         <?php } ?>
         <?php if( have_rows('four_column_repeater') ): ?>
           <?php while( have_rows('four_column_repeater') ): the_row(); ?>
-            <div class="row gutters">
+            <div class="row gutters paddingbottom">
               <div class="col span_6">
                 <?php the_sub_field('column_1'); ?>
               </div>     

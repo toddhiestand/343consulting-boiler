@@ -9,7 +9,6 @@ A starting point, baseline theme for 343 Consulting WordPress projects.
 - This theme can be used out of the box but will require extra styles and page sections to be customized more fully 
 - Sermons archive for churches using custom post-types and taxonomies
 
-
 ## This theme is indebted to a few key resources
 
 - Responsive Grid system: http://responsive.gs/
