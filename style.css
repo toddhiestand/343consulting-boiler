@@ -95,6 +95,17 @@ a.button, input.button, input[type="submit"] {
 }
 
 
+.pin {
+  width: 100%;
+  z-index: 99999;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.pinned {
+  position: fixed !important;
+  border-bottom: 1px solid #f0f0f0;
+}
 
 /* LOGO */
 
@@ -212,19 +223,28 @@ video {
 
 /* LAYOUT STYLES */
 
-
-
-.pin {
-  width: 100%;
-  z-index: 99999;
-  position: relative;
-  background: #f0f0f0;
+.content-section {
+	padding: 75px 0;
 }
 
-.pinned {
-  position: fixed !important;
-  border-bottom: 1px solid #f0f0f0;
+.content-section.paddingtop {
+	padding: 75px 0 0 0;
 }
+
+.content-section.paddingbottom {
+	padding: 0 0 75px 0;
+}
+
+
+.content-section .introduction {
+	background:#f0f0f0;
+	font-size: 1.6em;
+	line-height: 1.3;
+	padding: 30px;
+	margin-bottom: 50px;
+}
+
+
 
 /* PAGE AND POST STYLES */ 
 

@@ -24,7 +24,7 @@
 				<div class="row">
 					<div class="header-content">
 					  	<?php if( $imgtitle = get_sub_field('title') ){ ?>
-              		<h1 style="text-align: <?php the_sub_field('title_align');?>"><?php echo $imgtitle; ?></h1>
+              		<h1 style="text-align: <?php the_sub_field('title_alignment');?>"><?php echo $imgtitle; ?></h1>
             	<?php }?>  	
 					  	<?php if( $imgintro = get_sub_field('short_content') ){ ?>
               	<?php echo $imgintro; ?>
@@ -60,7 +60,7 @@
 		      </video>
 		      <div id="videocontent">
 		        	<?php if( $vidtitle = get_sub_field('title') ){ ?>
-              	<h1 style="text-align: <?php the_sub_field('title_align');?>"><?php echo $vidtitle; ?></h1>
+              	<h1 style="text-align: <?php the_sub_field('title_alignment');?>"><?php echo $vidtitle; ?></h1>
             	<?php }?>  	
 					  	<?php if( $vidintro = get_sub_field('short_content') ){ ?>
               	<?php echo $vidintro; ?>
