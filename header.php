@@ -9,7 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
-		<link rel="stylesheet" media="all" href="<?php bloginfo('template_directory'); ?>/css/responsive.gs.24col.css" />
 	
 	<!-- if page is content page -->
 	<?php if (is_single()) { ?>
