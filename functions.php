@@ -8,7 +8,7 @@ require_once(__DIR__ . '/lib/taxonomies.php');
 require_once(__DIR__ . '/lib/post-types.php');
 
 // Includes our custom post types
-require_once(__DIR__ . '/lib/fields.php');
+// require_once(__DIR__ . '/lib/fields.php');
 
 
 // Register our sidebars
