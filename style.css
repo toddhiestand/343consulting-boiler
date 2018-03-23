@@ -173,6 +173,17 @@ a[rel="next"] {
 }
 
 
+/* Footer Styles */
+
+.baseline p {
+	font-size: 10px;
+}
+
+.by343 {
+	text-align: right;
+}
+
+
 /* PAGINATION STYLES */
 
 .pagination { 
