@@ -32,23 +32,25 @@
 
 <body <?php body_class(); ?>>
 
-<nav class="pushy pushy-right mobileshow">
-  <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'mobilemenu' ) ); ?>
-</nav>
-<div class="site-overlay"></div>
-
-<div id="container">
+<?php if ('on' == get_field('alert_status','option')) { ?>   
+	<div class="wide-container alert">
+		<div class="container">
+			<p class="alert-content"><i class="far fa-bell"></i> <a href="<?php the_field('alert_link','option');?>"><?php the_field('alert_text','option');?> <i class="fas fa-angle-right"></i>
+</a></p>
+		</div>
+	</div>	
+<?php } ?>
 
 <div class="wide-container header-container pin">
-	<div class="container row">
-		<header class="row">
-			<div class="col span_8 siteid">
-			<a class="menu-btn mobileshow" href="#">&#9776;</a> 
+	<div class="container wide">
+	<header class="row">
+		<div class="col span_6 siteid">
 				<h1><a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
-			<div class="navigation mobilehide col span_16">
-				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'mobilemenu mobilehide' ) ); ?>
-			</div>
-		</header>
-	</div>
+		<div class="navigation col span_18">
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_id' => 'cssmenu' ) ); ?>	
+		</div>
+	</header>
 </div>
+</div>
+

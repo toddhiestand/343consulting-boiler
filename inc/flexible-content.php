@@ -60,6 +60,37 @@
       </div>
     </div>  
 
+      <?php elseif(get_row_layout() == "two_flexible_width_columns"): // layout: two Columns ?>
+    
+    <div id="<?php echo "scrollsection{$i}";?>" class="wide-container content-section <?php the_sub_field('padding_setting'); ?>" style="background: <?php the_sub_field('background_color'); ?>;">
+      <div class="container <?php the_sub_field('container_width');?>">
+        <?php if ('yes' == get_sub_field('use_titles_&_intro')) { ?>   
+          <div class="row paddingbottom">
+            <?php if( $title = get_sub_field('title') ){ ?>
+              <h3><?php echo $title; ?></h3>
+            <?php }?>  
+            <?php if( $introductiontwo = get_sub_field('introduction') ){ ?>
+              <div class="introduction">
+                <p><?php echo $introductiontwo; ?></p>
+              </div>
+            <?php }?>  
+          </div>
+        <?php } ?>
+        <div class="row gutters">
+          <div class="col span_<?php the_sub_field('left_column_width'); ?>">
+             <?php the_sub_field('left_column'); ?>
+          </div>
+          <div class="col span_<?php the_sub_field('right_column_width'); ?>">
+             <?php the_sub_field('right_column'); ?>
+          </div>
+        </div>      
+      </div>
+    </div> 
+
+        <?php if ('yes' == get_sub_field('add_line_below_section')) { ?>   
+        <hr/>
+      <?php } ?>
+
     <?php elseif(get_row_layout() == "three_columns_section"): // layout: two Columns ?>
     
     <div id="<?php echo "scrollsection{$i}";?>" class="wide-container content-section <?php the_sub_field('padding_setting'); ?>" style="color:<?php the_sub_field('font_color'); ?>;background: <?php the_sub_field('background_color'); ?>;">
@@ -94,6 +125,17 @@
       </div>
     </div>  
 
+
+     <?php elseif(get_row_layout() == "large_quote_section"): // layout: Large Quote with Background Image ?>
+    
+      <?php $bgimage = wp_get_attachment_image_src(get_sub_field('the_image'), ''); ?>   
+      <div id="<?php echo "scrollsection{$i}";?>" class="wide-container content-section background-image" style="background-image: url(<?php echo $bgimage[0]; ?>);">
+        <div class="container <?php the_sub_field('container_width');?>">
+          <div class="row background-image-content" style="padding-top: <?php the_sub_field('padding'); ?>px;padding-bottom: <?php the_sub_field('padding'); ?>px; ">
+            <?php the_sub_field('the_quote');?>
+          </div>
+        </div>
+      </div>  
 
      <?php elseif(get_row_layout() == "four_columns_section"): // layout: two Columns ?>
     
