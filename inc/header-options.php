@@ -29,6 +29,9 @@
 					  	<?php if( $imgintro = get_sub_field('short_content') ){ ?>
               	<?php echo $imgintro; ?>
             	<?php }?>  	
+            	<?php if( $headercontent = get_sub_field('header_content') ){ ?>
+              	<?php echo $headercontent; ?>
+            	<?php }?>  	
 					</div>
 				</div>
 			</div>
