@@ -1,3 +1,51 @@
+
+.pushy {
+  padding: 30px;
+}
+
+.mobilemenu ul {
+  margin:0;padding:0;
+  list-style: none; 
+  text-transform: uppercase;
+}
+
+.mobilemenu ul li a {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.mobilemenu ul li.closebtn a {
+  font-size: .8em;
+  letter-spacing: 2px;
+}
+
+.mobilemenu ul li {
+  position: relative;
+}
+
+.mobilemenu ul ul {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background: #333;
+  font-size: .6em;
+}
+
+.mobilemenu ul li.menu-item-has-children a:after {
+  content: "+"; /* Insert content that looks like bullets */
+  padding-left: 10px;
+  color: #fff;
+}
+
+.mobilemenu ul.sub-menu li a:after {
+  content: ""; /* Insert content that looks like bullets */
+  padding-left: 10px;
+  color: #fff;
+}
+
+.navigation {
+  padding: 9px 0;
+}
+
 #cssmenu ul {
   text-align: right;
   padding: 30px 0;
@@ -40,6 +88,7 @@
   display: inline-block;
   text-align: center;
 }
+
 #cssmenu.align-center > ul {
   font-size: 0;
   text-align: center;
@@ -54,31 +103,35 @@
 #cssmenu.align-right > ul > li {
   float: right;
 }
+
+/* primary color */
 #cssmenu > ul > li > a {
-  padding: 15px 20px;
+  padding: 15px 14px;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
-  color: #fff;
+  color: #11bf00;
   font-weight: 700;
   text-transform: uppercase;
 }
+
+/* hover color */
 #cssmenu > ul > li:hover > a {
-  color: #ffffff;
-  background: #0f2f35;
+  color: #ff02db;
+  background: none;
   cursor: pointer;
 }
 
+/* change the hover background on current menu item */
 #cssmenu > ul > li.current-menu-item a,
 #cssmenu > ul > li.current-page-ancestor a{
-  background: #0f2f35;
-
+  background: #ccc;
 }
 
-#cssmenu > ul > li.has-sub > a {
-  padding-right: 30px;
+#cssmenu > ul > li.menu-item-has-children > a {
+  padding-right: 25px;
 }
-#cssmenu > ul > li.has-sub > a:after {
+#cssmenu > ul > li.menu-item-has-children > a:after {
   position: absolute;
   top: 22px;
   right: 11px;
@@ -88,7 +141,7 @@
   background: #dddddd;
   content: '';
 }
-#cssmenu > ul > li.has-sub > a:before {
+#cssmenu > ul > li.menu-item-has-children > a:before {
   position: absolute;
   top: 19px;
   right: 14px;
@@ -103,7 +156,7 @@
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-#cssmenu > ul > li.has-sub:hover > a:before {
+#cssmenu > ul > li.menu-item-has-children:hover > a:before {
   top: 23px;
   height: 0;
 }
@@ -158,7 +211,7 @@
   color: #ffffff;
   background: #0f2f35;
 }
-#cssmenu ul ul li.has-sub > a:after {
+#cssmenu ul ul li.menu-item-has-children > a:after {
   position: absolute;
   top: 16px;
   right: 11px;
@@ -168,11 +221,11 @@
   background: #dddddd;
   content: '';
 }
-#cssmenu.align-right ul ul li.has-sub > a:after {
+#cssmenu.align-right ul ul li.menu-item-has-children > a:after {
   right: auto;
   left: 11px;
 }
-#cssmenu ul ul li.has-sub > a:before {
+#cssmenu ul ul li.menu-item-has-children > a:before {
   position: absolute;
   top: 13px;
   right: 14px;
@@ -187,172 +240,11 @@
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-#cssmenu.align-right ul ul li.has-sub > a:before {
+#cssmenu.align-right ul ul li.menu-item-has-children > a:before {
   right: auto;
   left: 14px;
 }
-#cssmenu ul ul > li.has-sub:hover > a:before {
+#cssmenu ul ul > li.menu-item-has-children:hover > a:before {
   top: 17px;
   height: 0;
-}
-@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
-  #cssmenu {
-    width: 100%;
-  }
-  #cssmenu ul {
-    width: 100%;
-    display: none;
-  }
-  #cssmenu.align-center > ul {
-    text-align: left;
-  }
-  #cssmenu ul li {
-    width: 100%;
-    border-top: 1px solid rgba(120, 120, 120, 0.2);
-  }
-  #cssmenu ul ul li,
-  #cssmenu li:hover > ul > li {
-    height: auto;
-  }
-  #cssmenu ul li a,
-  #cssmenu ul ul li a {
-    width: 100%;
-    border-bottom: 0;
-  }
-  #cssmenu > ul > li {
-    float: none;
-  }
-  #cssmenu ul ul li a {
-    padding-left: 25px;
-  }
-  #cssmenu ul ul ul li a {
-    padding-left: 35px;
-  }
-  #cssmenu ul ul li a {
-    color: #dddddd;
-    background: none;
-  }
-  #cssmenu ul ul li:hover > a,
-  #cssmenu ul ul li.active > a {
-    color: #ffffff;
-  }
-  #cssmenu ul ul,
-  #cssmenu ul ul ul,
-  #cssmenu.align-right ul ul {
-    position: relative;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    text-align: left;
-  }
-  #cssmenu > ul > li.has-sub > a:after,
-  #cssmenu > ul > li.has-sub > a:before,
-  #cssmenu ul ul > li.has-sub > a:after,
-  #cssmenu ul ul > li.has-sub > a:before {
-    display: none;
-  }
-  #cssmenu #menu-button {
-    display: block;
-    padding: 17px;
-    color: #dddddd;
-    cursor: pointer;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  #cssmenu #menu-button:after {
-    position: absolute;
-    top: 22px;
-    right: 17px;
-    display: block;
-    height: 4px;
-    width: 20px;
-    border-top: 2px solid #dddddd;
-    border-bottom: 2px solid #dddddd;
-    content: '';
-  }
-  #cssmenu #menu-button:before {
-    position: absolute;
-    top: 16px;
-    right: 17px;
-    display: block;
-    height: 2px;
-    width: 20px;
-    background: #dddddd;
-    content: '';
-  }
-  #cssmenu #menu-button.menu-opened:after {
-    top: 23px;
-    border: 0;
-    height: 2px;
-    width: 15px;
-    background: #ffffff;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  #cssmenu #menu-button.menu-opened:before {
-    top: 23px;
-    background: #ffffff;
-    width: 15px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  #cssmenu .submenu-button {
-    position: absolute;
-    z-index: 999999;
-    right: 0;
-    top: 0;
-    display: block;
-    border-left: 1px solid rgba(120, 120, 120, 0.2);
-    height: 46px;
-    width: 46px;
-    cursor: pointer;
-  }
-  #cssmenu .submenu-button.submenu-opened {
-    background: #262626;
-  }
-  #cssmenu ul ul .submenu-button {
-    height: 34px;
-    width: 34px;
-  }
-  #cssmenu .submenu-button:after {
-    position: absolute;
-    top: 22px;
-    right: 19px;
-    width: 8px;
-    height: 2px;
-    display: block;
-    background: #dddddd;
-    content: '';
-  }
-  #cssmenu ul ul .submenu-button:after {
-    top: 15px;
-    right: 13px;
-  }
-  #cssmenu .submenu-button.submenu-opened:after {
-    background: #ffffff;
-  }
-  #cssmenu .submenu-button:before {
-    position: absolute;
-    top: 19px;
-    right: 22px;
-    display: block;
-    width: 2px;
-    height: 8px;
-    background: #dddddd;
-    content: '';
-  }
-  #cssmenu ul ul .submenu-button:before {
-    top: 12px;
-    right: 16px;
-  }
-  #cssmenu .submenu-button.submenu-opened:before {
-    display: none;
-  }
 }

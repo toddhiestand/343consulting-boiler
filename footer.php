@@ -1,7 +1,4 @@
 
-    </div>
-</div>
-
 <div class="wide-container baseline">
     <div class="container">
         <div class="row gutters">
@@ -14,12 +11,18 @@
         </div>
     </div>
 </div>
+
+</div>
+
+
+
    
 </body>
 
 </html>
 
 <script>
+
 
     // Clear the input boxes when clicked
 
@@ -39,8 +42,6 @@
 		jQuery(".input_clear input, .input_clear textarea").cleardefault();
 
 	});
-
-
 
 
 	
@@ -96,6 +97,8 @@ $(document).ready(function() {
 
 	
 });
+
+      
 
 </script>
 
