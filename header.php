@@ -28,9 +28,17 @@
 
 	<?php wp_head(); ?>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'pushy pushy-left mobilemenu' ) ); ?>	
+<div class="site-overlay"></div>
+
+<div id="container">
+
 
 <?php if ('on' == get_field('alert_status','option')) { ?>   
 	<div class="wide-container alert">
@@ -45,12 +53,15 @@
 	<div class="container wide">
 	<header class="row">
 		<div class="col span_6 siteid">
-				<h1><a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			</div>
+			<p class="menu-icon"><button class="menu-btn mobileshow">&#9776; Menu</button></p>
+			<h1><a href="<?php echo site_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		</div>
 		<div class="navigation col span_18">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_id' => 'cssmenu' ) ); ?>	
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'mobilehide' , 'container_id' => 'cssmenu' ) ); ?>	
 		</div>
 	</header>
 </div>
 </div>
+
+
 

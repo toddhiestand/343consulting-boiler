@@ -162,7 +162,15 @@ a.button.small {
   overflow: hidden;
 }
 
+.alert {
+	background: #f0f0f0;
+}
 
+.alert p {
+	margin: 0;
+	padding: 5px 0;
+	text-align: center;
+}
 
 /* HEADER STYLES */
 
