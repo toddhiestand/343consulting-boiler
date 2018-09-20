@@ -1,6 +1,6 @@
 <?php $i = 0; ?><!-- add a number to each section to make calling them easier --> 
 
-<?php while(the_flexible_field("default_content_sections")): ?>
+<?php while(the_flexible_field("page_content")): ?>
   
 <?php $i++; ?>
 
@@ -65,7 +65,7 @@
     <div id="<?php echo "scrollsection{$i}";?>" class="wide-container content-section <?php the_sub_field('padding_setting'); ?>" style="background: <?php the_sub_field('background_color'); ?>;">
       <div class="container <?php the_sub_field('container_width');?>">
         <?php if ('yes' == get_sub_field('use_titles_&_intro')) { ?>   
-          <div class="row paddingbottom">
+          <div class="row">
             <?php if( $title = get_sub_field('title') ){ ?>
               <h3><?php echo $title; ?></h3>
             <?php }?>  
