@@ -132,7 +132,7 @@ a.button.small {
 
 .pin {
   width: 100%;
-  z-index: 99999;
+  z-index: 999;
   position: relative;
   background: #ffffff;
 }

@@ -20,6 +20,10 @@ a.mobilepagebtn {
   color: #000;
 }
 
+#cssmenu > ul > li.mobileshow {
+  display: none;
+}
+
 
 @media only screen 
 and (max-width : 768px) {
@@ -38,6 +42,10 @@ and (max-width : 768px) {
 
   .mobilehide {
     display: none !important;
+  }
+
+   #cssmenu > ul > li.mobileshow {
+    display: block;
   }
 
   iframe {
