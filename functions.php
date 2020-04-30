@@ -8,7 +8,7 @@
 // require_once(__DIR__ . '/lib/post-types.php');
 
 // Includes our custom post types
-require_once(__DIR__ . '/lib/blocks.php');
+// require_once(__DIR__ . '/lib/blocks.php');
 
 
 // Register our sidebars
@@ -39,7 +39,6 @@ register_sidebar(array(
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 }
-
 
 // Add us some fancy menus
 
@@ -101,7 +100,7 @@ function enqueue_scripts() {
   wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '', 'all' );
   wp_register_style( 'grid', get_template_directory_uri() . '/assets/css/responsive.gs.24col.css', array(), '', 'all' );
   wp_register_style( 'mobile', get_template_directory_uri() . '/assets/css/mobile.css', array(), '', 'all' );
-  // wp_register_style( 'fancybox-css', get_template_directory_uri() . '/css/jquery.fancybox.min.css', array(), '', 'all' );
+  wp_register_style( 'fancybox-css', get_template_directory_uri() . '/css/jquery.fancybox.min.css', array(), '', 'all' );
   wp_register_style( 'pushy', get_template_directory_uri() . '/assets/css/pushy.css', array(), '', 'all' );
   wp_register_style( 'menu', get_template_directory_uri() . '/assets/css/menu.css', array(), '', 'all' );
   wp_register_style( 'flickity', get_template_directory_uri() . '/assets/css/flickity.css', array(), '1.1.5', 'all' );
@@ -110,7 +109,7 @@ function enqueue_scripts() {
   wp_deregister_script('jquery');
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.10.1');
   wp_register_script( 'flickityscript', get_template_directory_uri() . '/assets/scripts/flickity.pkgd.min.js', array(), true,true );
-  // wp_register_script( 'fancybox-js', get_template_directory_uri() . '/assets/scripts/jquery.fancybox.min.js', array(), true,true );
+  wp_register_script( 'fancybox-js', get_template_directory_uri() . '/assets/scripts/jquery.fancybox.min.js', array(), true,true );
   wp_register_script( 'pushy', get_template_directory_uri() . '/assets/scripts/pushy.js', array(), true,true );
 
   // enqueue the enqueue the styles
@@ -119,34 +118,28 @@ function enqueue_scripts() {
   wp_enqueue_style('flickity');
   wp_enqueue_style('menu');
   wp_enqueue_style('grid');
-  // wp_enqueue_style('fancybox-css');
+  wp_enqueue_style('fancybox-css');
   wp_enqueue_style('mobile');
   
   // enqueue the scripts
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'pushy' );
   wp_enqueue_script( 'flickityscript' );
-
-  // wp_enqueue_script( 'fancybox-js' );
+  wp_enqueue_script( 'fancybox-js' );
 
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
-
 // Add RSS links to the header
 add_theme_support('automatic-feed-links');
 
-
-
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
-       global $post;
+   global $post;
   return '[...] <div class="read-more"><a class="button small" href="'. get_permalink($post->ID) . '"> Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-
 
 // Add some featured images and sizes
  if ( function_exists( 'add_theme_support' ) ) {
@@ -159,8 +152,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
  add_image_size( 'image-single', 640, 420, true ); // 400 pixels wide (and unlimited height)
 }
 
-
-
 // Get rid of self-pings
  function no_self_ping( &$links ) {
      $home = get_option( 'home' );
@@ -169,7 +160,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
              unset($links[$l]);
  }
  add_action( 'pre_ping', 'no_self_ping' );
-
 
 // Add custom branding to the footer of the admin
  
@@ -192,28 +182,5 @@ add_action('login_head', 'custom_login');
          echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&dt=spam&c='.$id.'">spam</a>';
      }
  }
-
-
-/**
- * Add a block category for "Get With Gutenberg" if it doesn't exist already.
- *
- * @param array $categories Array of block categories.
- *
- * @return array
- */
-function gwg_block_categories( $categories ) {
-    $category_slugs = wp_list_pluck( $categories, 'slug' );
-    return in_array( 'gwg', $category_slugs, true ) ? $categories : array_merge(
-        $categories,
-        array(
-            array(
-                'slug'  => 'gwg',
-                'title' => __( '343 Blocks', 'gwg' ),
-                'icon'  => null,
-            ),
-        )
-    );
-}
-add_filter( 'block_categories', 'gwg_block_categories' );
 
 ?>
