@@ -1,51 +1,47 @@
 
-<div class="wide-container baseline">
-    <div class="container">
-        <div class="row gutters">
-          <div class="col span_12"> 
-            <p>&copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?></p>
-         	</div>
-         	<div class="col span_12 by343"> 
-            <p class="by">Site by <a target="_blank" href="https://www.343consulting.com">343 Consulting</a></p>
-          </div>
-        </div>
-    </div>
-</div>
+	<div class="wide-container baseline">
+	  <div class="container">
+	    <div class="row gutters">
+	      <div class="col span_12 centered"> 
+	        <p>&copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?></p>
+	     	</div>
+	    </div>
+	    <div class="row">
+	      <p class="by">Site by <a target="_blank" href="https://www.343consulting.com"><img src="<?php bloginfo('template_directory'); ?>/images/343.png" alt="343 Consulting" /></a></p>
+	    </div>
+	  </div>
+	</div>
 
-</div>
+</div><!-- end id container -->
 
-
-
-   
 </body>
-
 </html>
 
-<script>
+<?php wp_footer();?>
 
+ <script type="text/javascript">
 
-    // Clear the input boxes when clicked
-
-	jQuery(document).ready(function() {
-
-		jQuery.fn.cleardefault = function() {
-		return this.focus(function() {
-		if( this.value == this.defaultValue ) {
-		this.value = "";
-		}
-		}).blur(function() {
-		if( !this.value.length ) {
-		this.value = this.defaultValue;
-		}
+		$('.hero-carousel').flickity({
+		  // options
+		  cellAlign: 'left',
+		  wrapAround: true,
+		  pageDots: false,
+		  contain: true
 		});
-		};
-		jQuery(".input_clear input, .input_clear textarea").cleardefault();
 
-	});
+		$('.main-carousel').flickity({
+		  // options
+		  cellAlign: 'left',
+		  wrapAround: true,
+		  adaptiveHeight: false,
+		  pageDots: false,
+		  groupCells: true,
+			groupCells: 2,
+			groupCells: '80%',
+		  contain: true
+		});
 
-
-	
-		 // Scroll to Div for the home page
+// Scroll to Div for the home page
 
 function scrollToElement(selector, time, verticalOffset) {
 	time = typeof(time) != 'undefined' ? time : 500;
@@ -60,37 +56,37 @@ function scrollToElement(selector, time, verticalOffset) {
 			
 $(document).ready(function() {
 		
-	$('#scroll-to-scrollsection1').click(function (e) {
+	$('#scrolltosection1').click(function (e) {
 		e.preventDefault();
 		scrollToElement('#scrollsection1');
 	});
 
-	$('#scroll-to-scrollsection2').click(function (e) {
+	$('#scrolltosection2').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection2');
 		});
 
-	$('#scroll-to-scrollsection3').click(function (e) {
+	$('#scrolltosection3').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection3');
 		});
 
-	$('#scroll-to-scrollsection4').click(function (e) {
+	$('#scrolltosection4').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection4');
 		});
 
-	$('#scroll-to-scrollsection5').click(function (e) {
+	$('#scrolltosection5').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection5');
 		});
 
-	$('#scroll-to-scrollsection6').click(function (e) {
+	$('#scrolltosection6').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection6');
 		});
 
-	$('#scroll-to-scrollsection7').click(function (e) {
+	$('#scrolltosection7').click(function (e) {
 			e.preventDefault();
 			scrollToElement('#scrollsection7');
 		});
@@ -102,4 +98,3 @@ $(document).ready(function() {
 
 </script>
 
-<?php wp_footer();?>

@@ -107,17 +107,16 @@
 /* primary color */
 #cssmenu > ul > li > a {
   padding: 15px 14px;
-  font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
-  color: #11bf00;
+  color: #fd1cdc;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 /* hover color */
 #cssmenu > ul > li:hover > a {
-  color: #ff02db;
+  color: #000;
   background: none;
   cursor: pointer;
 }
@@ -125,7 +124,7 @@
 /* change the hover background on current menu item */
 #cssmenu > ul > li.current-menu-item a,
 #cssmenu > ul > li.current-page-ancestor a{
-  background: #ccc;
+  color: #000;
 }
 
 #cssmenu > ul > li.menu-item-has-children > a {
@@ -194,8 +193,7 @@
 #cssmenu ul ul li a {
   border-bottom: 1px solid rgba(150, 150, 150, 0.15);
   padding: 15px 15px;
-  width: 170px;
-  font-size: 14px;
+  width: 300px;
   text-decoration: none;
   color: #dddddd;
   font-weight: 400;

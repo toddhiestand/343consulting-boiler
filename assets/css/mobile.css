@@ -1,0 +1,99 @@
+
+.mobileshow {
+  display: none;
+}
+
+p.menu-icon {
+  text-align: center;
+}
+
+#cssmenu > ul > li.mobileshow {
+  display: none;
+}
+
+@media only screen 
+and (max-width : 768px) {
+
+  p.menu-icon {
+    text-align: right;
+  }
+
+  button.menu-btn {
+    display: inline;
+    font-size: 2em;
+    font-weight: bold;
+    background:none;
+    border:none;
+    text-transform: uppercase;
+    color: #ff02db;
+  }
+
+  .mobilelogo {
+    margin: 20px auto 0 auto;
+  }
+
+  .menu-content {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .siteid.col {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .siteid h1  {
+    width: 70%;
+    height: 65px;
+    margin:20px 0;
+  }
+
+  .siteid h1 a {
+    height: 65px;
+  }
+
+
+  .siteid p.menu-icon {
+    width: 30%;
+    margin:0;
+  }
+
+  .mobileshow {
+    display: block;
+  }
+
+  .mobilehide {
+    display: none !important;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .menu li a {
+    color: #fff;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero-inner {
+    width: 90%;
+  }
+
+
+}
+
+@media only screen 
+and (max-width : 421px) {
+  
+  .mobileshow {
+    display: inline;
+  }
+
+}

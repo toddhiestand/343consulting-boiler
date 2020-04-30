@@ -2,16 +2,13 @@
 
 
 // Includes our custom taxonomies
-require_once(__DIR__ . '/lib/taxonomies.php');
+// require_once(__DIR__ . '/lib/taxonomies.php');
 
 // Includes our custom post types
-require_once(__DIR__ . '/lib/post-types.php');
-
-// Includes required plugins file
-require_once dirname( __FILE__ ) . '/lib/plugins.php';
+// require_once(__DIR__ . '/lib/post-types.php');
 
 // Includes our custom post types
-// require_once(__DIR__ . '/lib/fields.php');
+require_once(__DIR__ . '/lib/blocks.php');
 
 
 // Register our sidebars
@@ -35,14 +32,12 @@ register_sidebar(array(
     'before_title' => '<h3>',
     'after_title' => '</h3>',
     ));  
-
-
 }
 
+
+// Add ACF Options page if it exists
 if( function_exists('acf_add_options_page') ) {
-  
   acf_add_options_page();
-  
 }
 
 
@@ -52,49 +47,87 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'main-menu' => __( 'Main Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+      'footer-menu' => __( 'Footer Menu' ),
+      'mobile-menu' => __( 'Mobile Menu' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
 
+// remove dashboard widgets
+function remove_dashboard_widgets() {
+    global $wp_meta_boxes;
+ 
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+ 
+}
+
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+ 
+function my_custom_dashboard_widgets() {
+global $wp_meta_boxes;
+ 
+wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard_help');
+}
+ 
+function custom_dashboard_help() {
+echo '
+  <h3>Welcome</h3>
+  <p>Your website was built with love and care by Todd at <strong>343 Consulting, LLC</strong>.</p>
+  <h3>Support</h3>
+  <p> If you ever need any help with your website, please contact us at <a href="mailto:todd@343consulting.com">todd@343consulting.com</a>. </p>
+  <p>You can visit us online at <a target="_blank" href="https://343consulting.com">https://343consulting.com</a>.</p>
+  '
+  ;
+}
+
+ 
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+remove_action('welcome_panel', 'wp_welcome_panel');
 
 // register da scripts that we often use
 function enqueue_scripts() {
 
   // register the styles
   wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '', 'all' );
-  wp_register_style( 'grid', get_template_directory_uri() . '/css/responsive.gs.24col.css', array(), '', 'all' );
-  wp_register_style( 'bxcss', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '', 'all' );
-  wp_register_style( 'mobile', get_template_directory_uri() . '/css/mobile.css', array(), '', 'all' );
-  wp_register_style( 'fancybox-css', get_template_directory_uri() . '/css/jquery.fancybox.min.css', array(), '', 'all' );
-  wp_register_style( 'pushy', get_template_directory_uri() . '/css/pushy.css', array(), '', 'all' );
-  wp_register_style( 'menu', get_template_directory_uri() . '/css/menu.css', array(), '', 'all' );
+  wp_register_style( 'grid', get_template_directory_uri() . '/assets/css/responsive.gs.24col.css', array(), '', 'all' );
+  wp_register_style( 'mobile', get_template_directory_uri() . '/assets/css/mobile.css', array(), '', 'all' );
+  // wp_register_style( 'fancybox-css', get_template_directory_uri() . '/css/jquery.fancybox.min.css', array(), '', 'all' );
+  wp_register_style( 'pushy', get_template_directory_uri() . '/assets/css/pushy.css', array(), '', 'all' );
+  wp_register_style( 'menu', get_template_directory_uri() . '/assets/css/menu.css', array(), '', 'all' );
+  wp_register_style( 'flickity', get_template_directory_uri() . '/assets/css/flickity.css', array(), '1.1.5', 'all' );
 
   // register the scripts 
   wp_deregister_script('jquery');
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.10.1');
-  wp_register_script( 'bxjs', get_template_directory_uri() . '/scripts/jquery.bxslider.js', array(), true,true );
-  wp_register_script( 'fancybox-js', get_template_directory_uri() . '/scripts/jquery.fancybox.min.js', array(), true,true );
-  wp_register_script( 'pin', get_template_directory_uri() . '/scripts/pin.js', array(), true,true );
-  wp_register_script( 'pushy', get_template_directory_uri() . '/scripts/pushy.js', array(), true,true );
+  wp_register_script( 'flickityscript', get_template_directory_uri() . '/assets/scripts/flickity.pkgd.min.js', array(), true,true );
+  // wp_register_script( 'fancybox-js', get_template_directory_uri() . '/assets/scripts/jquery.fancybox.min.js', array(), true,true );
+  wp_register_script( 'pushy', get_template_directory_uri() . '/assets/scripts/pushy.js', array(), true,true );
 
   // enqueue the enqueue the styles
   wp_enqueue_style('style');
   wp_enqueue_style('pushy');
+  wp_enqueue_style('flickity');
   wp_enqueue_style('menu');
   wp_enqueue_style('grid');
-  wp_enqueue_style('bxcss');
-  wp_enqueue_style('fancybox-css');
+  // wp_enqueue_style('fancybox-css');
   wp_enqueue_style('mobile');
   
   // enqueue the scripts
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'pushy' );
-  wp_enqueue_script( 'bxjs' );
-  wp_enqueue_script( 'fancybox-js' );
-  wp_enqueue_script( 'pin' );
+  wp_enqueue_script( 'flickityscript' );
+
+  // wp_enqueue_script( 'fancybox-js' );
 
 }
 
@@ -141,7 +174,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // Add custom branding to the footer of the admin
  
 function modify_footer_admin () {
-  echo 'Created by <a href="http://www.343consulting.com">343 Consulting</a>.';
+  echo 'Created by <a href="http://343consulting.com">343 Consulting</a>.';
 }
 
 add_filter('admin_footer_text', 'modify_footer_admin');
@@ -160,5 +193,27 @@ add_action('login_head', 'custom_login');
      }
  }
 
+
+/**
+ * Add a block category for "Get With Gutenberg" if it doesn't exist already.
+ *
+ * @param array $categories Array of block categories.
+ *
+ * @return array
+ */
+function gwg_block_categories( $categories ) {
+    $category_slugs = wp_list_pluck( $categories, 'slug' );
+    return in_array( 'gwg', $category_slugs, true ) ? $categories : array_merge(
+        $categories,
+        array(
+            array(
+                'slug'  => 'gwg',
+                'title' => __( '343 Blocks', 'gwg' ),
+                'icon'  => null,
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'gwg_block_categories' );
 
 ?>

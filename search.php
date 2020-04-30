@@ -18,9 +18,8 @@ get_header();
 			
 <div class="wide-container">
 	<div class="container">		
-		<main role="main" class="row gutters">
-			<div class="col span_16">
-				<div class="row articles">
+		<div role="main" class="row gutters">
+			<div class="col span_24">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						 <div class="article">
 							<div class="article-title">
@@ -29,15 +28,13 @@ get_header();
 							</div>
 						</div>
 					<?php endwhile; endif; ?>
-				</div>
-				<div class="row">
-					<div class="col span_24">
-					<?php get_template_part( 'inc/feature', 'pagination' ); ?>
-					</div>
+			</div>
+			<div class="row">
+				<div class="col span_24">
+				<?php get_template_part( 'inc/feature', 'pagination' ); ?>
 				</div>
 			</div>
-			<?php get_sidebar();?>
-		</main>
+		</div>
 	</div>
 </div>
 

@@ -1,10 +1,15 @@
 /*  
-Theme Name: 343 Consulting Boilerplate
+Theme Name: 343 Consulting Theme
 Theme URI: http://www.343consulting.com
-Description: Created by 343 Consulting
+Description: Created by 343 Consulting as a base theme for 343 Consulting web development projects 
 Version: 1.0
 Author: Todd Hiestand
 Author URI: http://www.343consulting.com
+*/
+
+/* initial colors 
+main color to find and replace:  00bf00
+secondary color to find and replace: ffce00 ;
 */
 
 /* TYPOGRAPHY AND TEXT STYLES */
@@ -13,8 +18,8 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
 	background: #fff;
-	font-size: 14px;
-	line-height: 155%;
+	font-size: 18px;
+	line-height: 1.3;
 	margin: 0;
 }
 
@@ -22,24 +27,23 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: .8em;
+	font-size: 12px;
+	margin:0;
 }
 
-p {
-	margin: .7em 0;
-}
+p { margin: .7em 0; }
 
 h1, h2, h3, h4, h5, h6 {
-	text-transform: capitalize;
 	font-weight: bold;
 	margin: .7em 0;
+	line-height: 1.2;
 }
 
 h1 { font-size: 2em; }
 h2 { font-size: 1.8em; }
 h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
+h5 { font-size: 1em; }
 h6 { font-size:	1em; }
 
 ol,ul {margin: 0px;}
@@ -50,43 +54,40 @@ ol {list-style-type: decimal;}
 
 a {
 	text-decoration: none;
-	color: #00bf00;
+	color: #fd1cdc;
+}
+
+a:hover {
+	color: #ffce00;
+}
+
+hr {
+	margin: 30px auto;
+	width: 50%;
+	background-color: #ccc;
+  border: 0 none;
+  color: #ccc;
+  height: 1px;
 }
 
 strong {font-weight: bold;}
 i, em {font-style: italic;}
 
-.ss-icon {vertical-align: middle;}
-
 iframe {max-width: 100%;}
 
 a.button, input.button, input[type="submit"] { 
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
-	border-radius: 2px; 
-	background: #ffce00;
-	padding: 14px 40px; 
-	color: #fff; 
-	font-weight: 600; 
+	color: #fff; 	
+	font-size: .8em;
+	font-weight: 400;
 	text-transform: uppercase; 
-	position: relative; 
-	border: none; 
-	top: 0; 
-	left: 0; 
-	vertical-align: middle; 
-	margin: 0; 
-	line-height: 100%; 
-	cursor: pointer; 
-	width: auto; 
-	overflow: visible; 
+	letter-spacing: 1px;
 	text-decoration: none; 
-	vertical-align: middle; 
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
-	box-sizing: border-box; 
-	display: inline-block; 
-	line-height: 100%; 
-	zoom: 1; 
+	border: none; 
+	background: #fd1cdc;
+	padding: 10px 20px; 
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	border-radius: 0px; 
 	-webkit-transition: background 0.3s ease-in-out;
 	-moz-transition: background 0.3s ease-in-out; 
 	-ms-transition: background 0.3s ease-in-out; 
@@ -94,52 +95,45 @@ a.button, input.button, input[type="submit"] {
 	transition: background 0.3s ease-in-out; 
 }
 
-a.button.ghost {
-	background: none;
-	border: 2px solid #fff;
-	color: #fff;
-}
-
-a.button.ghost:hover {
-	background:  #00bf00;
-	border: 2px solid #00bf00;
-	color: #fff;
-}
 
 a.button:hover {
-	background: #00bf00;
-}
-
-a.button.large {
-	padding: 20px 50px;
-	font-size: 1.4em;
-}
-
-a.button.large {
-	padding: 25px 60px;
-	font-size: 1.4em;
-}
-
-a.button.medium {
-	padding: 20px 40px;
-	font-size: 1.2em;
+	background: #3cedff;
 }
 
 a.button.small {
-	padding: 10px 30px;
+	padding: 8px 15px;
 	font-size: .9em;
 }
 
-.pin {
-  width: 100%;
-  z-index: 999;
-  position: relative;
-  background: #ffffff;
+a.button.medium {
+	padding: 15px 30px;
+	font-size: 1.2em;
 }
 
-.pinned {
-  position: fixed !important;
-  border-bottom: 1px solid #f0f0f0;
+a.button.large {
+	padding: 20px 40px;
+	font-size: 1.4em;
+}
+
+#myHeader.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+
+.wide-container.dark {
+	background: #000;
+	color: #fff;
+}
+
+.wide-container.grey {
+	background: #f0f0f0;
+}
+
+.wide-container.light {
+	background: #fff;
 }
 
 /* LOGO */
@@ -155,8 +149,8 @@ a.button.small {
 	display: block;
   width: 300px;
   height: 80px;
-	background: url(./images/logo.png) no-repeat;    
 	background-size: contain;
+	background-repeat: no-repeat;
 	text-indent: 119%;
   white-space: nowrap;
   overflow: hidden;
@@ -168,50 +162,27 @@ a.button.small {
 
 .alert p {
 	margin: 0;
-	padding: 5px 0;
+	padding: 10px 0;
 	text-align: center;
+	font-size: .9em;
 }
 
 /* HEADER STYLES */
 
-
-
-.page-header {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center left;
-	position: relative;
+.hero {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.header-content {	
- z-index: 999;
- position: absolute;
- bottom: 55%;
- left: 50%;
- transform: translateX(-51%) translateY(50%);
- display: block;
- width: 60%;
-}
-
-
-.header-content {
-	margin: 0;
-	color: #fff;
-	text-transform: capitalize;
-	font-weight: normal;
-	font-size: 1.4em;
-	line-height: 1.3em;
-	margin-top: 0px;
-}
-
-
-.video-header {
-	position: relative;
-	height: 89vh;
-	overflow: hidden;
-}
-
-.video-header:after {
+.hero:after {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -219,7 +190,33 @@ a.button.small {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background:rgba(35, 71, 54, .43);
+	/** change this per the website color guide **/
+	background:rgba(0, 0, 0, .4)
+}
+
+.hero.short {height: 50vh;}
+.hero.medium {height: 70vh}
+.hero.tall {height: 100vh;}
+
+.hero-inner {
+	width: 65%;
+	padding: 0px;
+	z-index: 9;
+	position: relative;
+}
+
+.hero h1 {
+	margin: 0;
+	color: #fff;
+}
+
+.hero h2 {
+	color: #fff;
+}
+
+.video-header {
+	position: relative;
+	overflow: hidden;
 }
 
 video { 
@@ -237,37 +234,67 @@ video {
   transition: 1s opacity;
 }
 
-#videocontent {
-	z-index: 999;
-	position: absolute;
-  bottom: 55%;
-  left: 46%;
-  transform: translateX(-45%) translateY(45%);
-  font-size: 1em;
-  display: block;
-  opacity: .9;
-  line-height: 100%;
-  width: 60%;
-}
-
-#videocontent p ,
-#videocontent h1{
-  color: #fff;
-	font-size: 2em;
-	margin-top: 0;
-	line-height: 1.3;
-	font-weight: 700;
-}
-
 .simple-header  {
 	padding: 40px 0;
 }
 
 
+/* CAROSEL STYLES */ 
+
+
+.flickity-button {
+    background: none !important;
+    color: #fff !important;
+}
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+
+.carousel-cell {
+  width: 100%;
+  counter-increment: gallery-cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-cell.hero-cell {
+	height: 90vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.carousel-cell .hero-content{
+	margin: 10%;
+	background: rgba(0, 0, 0, .7);
+	padding: 50px;
+	color: #fff;
+	width: 35%;
+}
+
+
 /* LAYOUT STYLES */
+
+.intro {
+	font-size: 1.4em;
+	line-height: 1.4;
+}
+
+h3.section-title {
+	text-align: center;
+}
+
+h3.normal-title {
+	text-align: left;
+}
 
 .content-section {
 	padding: 75px 0;
+}
+
+.content-section.paddingoff {
+	padding:0;
 }
 
 .content-section.paddingtop {
@@ -276,27 +303,6 @@ video {
 
 .content-section.paddingbottom {
 	padding: 0 0 75px 0;
-}
-
-
-.content-section .introduction {
-	font-size: 2em;
-	line-height: 1.3;
-	margin-bottom: 50px;
-}
-
-/* SERMON POST TYPE STYLES */ 
-
-
-.dropdown-container h3 {
-	font-size: 12px;
-	text-align: center;
-	line-height: 1;
-	margin:20px 0;
-}
-
-.dropdown-container select {
-	width: 100%;
 }
 
 
@@ -319,32 +325,18 @@ blockquote {
 	font-style: italic;
 }
 
-.page-content {
-	background: #fff;
-	padding: 50px;
-	margin-top: 50px;
-}
-
-.dropdown-container {
-	border-bottom: 1px solid #f0f0f0;
-}
-
-
 .article {
 	padding: 0 0 75px 0 !important;
-
 }
 
 .meta-section {
 	margin-top: 20px;
- 
 }
 
 .meta {
 	font-size: .9em;
 	margin:0;
 }
-
 
 .prevnext {
 	text-align: center;
@@ -362,11 +354,21 @@ a[rel="next"] {
 /* Footer Styles */
 
 .baseline p {
-	font-size: 10px;
+	text-align: center;
 }
 
-.by343 {
-	text-align: right;
+p.by{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	margin-top: 30px;
+}
+
+p.by img {
+	width: 60px;
+	height: auto;
+	margin: 10px auto;
 }
 
 
@@ -403,11 +405,11 @@ a[rel="next"] {
 }
 
 .pagination ul a:hover { 
-	background: #1b8c8c; color: #fff; 
+	background: #ffce00; color: #fff; 
 }
 
 .pagination ul span.current { 
-	background: #1b8c8c; 
+	background: #00bf00; 
 	color: #fff; 
 	display: inline-block; 
 	padding: 10px 10px; 

@@ -1,20 +1,58 @@
+#login form {
+  padding: 40px;
+}
+
 
 #login h1 a {
   background: url(../images/login-image.png) no-repeat top center;
   background-size: contain;
-  width: 326px;
-  height: 140px;
+  width: 225px;
+  height: 130px;
   text-indent: -9999px;
   overflow: hidden;
   padding-bottom: 15px;
   display: block; 
 }
 
+.login #login_error, .login .message, .login .success {
+  border-left: 4px solid #fcf950;
+  padding: 12px;
+  margin-left: 0;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+    color: #000;
+}
+
+.wp-core-ui .button-primary {
+    background: #444;
+    box-shadow: none;
+    border-color: #444;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.wp-core-ui .button-primary:hover {
+  background: #000;
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#login {
+  width: 400px;
+}
+
 #login form {
   margin-left: 8px;
-  padding: 26px 24px 46px;
+  padding: 40px;
   font-weight: normal;
-  background: #FBFBFB;
+  background: #fff;
   border: none;
   -webkit-border-radius: 0px;
   -khtml-border-radius: 0px;
