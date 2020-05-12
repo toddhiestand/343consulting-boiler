@@ -1,5 +1,5 @@
 /*  
-Theme Name: 343 Consulting Theme
+Theme Name: 343 Consulting
 Theme URI: http://www.343consulting.com
 Description: Created by 343 Consulting as a base theme for 343 Consulting web development projects 
 Version: 1.0
@@ -19,7 +19,7 @@ body {
 	color: #000;
 	background: #fff;
 	font-size: 18px;
-	line-height: 1.3;
+	line-height: 1.2;
 	margin: 0;
 }
 
@@ -61,6 +61,7 @@ a:hover {
 	color: #ffce00;
 }
 
+/* fancy hr for creating breaks in content */
 hr {
 	margin: 30px auto;
 	width: 50%;
@@ -95,7 +96,6 @@ a.button, input.button, input[type="submit"] {
 	transition: background 0.3s ease-in-out; 
 }
 
-
 a.button:hover {
 	background: #3cedff;
 }
@@ -123,6 +123,7 @@ a.button.large {
   z-index: 9999;
 }
 
+/* change these according to the theme colors */
 .wide-container.dark {
 	background: #000;
 	color: #fff;
@@ -156,6 +157,8 @@ a.button.large {
   overflow: hidden;
 }
 
+/* Let's make a fancy alert bar */
+
 .alert {
 	background: #f0f0f0;
 }
@@ -167,7 +170,7 @@ a.button.large {
 	font-size: .9em;
 }
 
-/* HEADER STYLES */
+/* HERO STYLES */
 
 .hero {
   width: 100vw;
@@ -214,6 +217,8 @@ a.button.large {
 	color: #fff;
 }
 
+/* Video hero */
+
 .video-header {
 	position: relative;
 	overflow: hidden;
@@ -234,13 +239,51 @@ video {
   transition: 1s opacity;
 }
 
+/* Simple header */
+
 .simple-header  {
 	padding: 40px 0;
+	text-align: center;
+}
+
+/* Section Layout Styles */
+
+.intro {
+	font-size: 1.4em;
+	line-height: 1.4;
+}
+
+h3.section-title {
+	text-align: center;
+}
+
+h3.normal-title {
+	text-align: left;
+}
+
+/* PAGE AND POST STYLES */ 
+
+blockquote {
+	margin: 20px;
+	padding: 0px 20px;
+	border-left: 1px solid #ccc;
+	font-style: italic;
+}
+
+.prevnext {
+	text-align: center;
+	margin-top: 40px;
+}
+
+a[rel="prev"] {
+	float: left;
+}
+a[rel="next"] {
+	float: right;
 }
 
 
-/* CAROSEL STYLES */ 
-
+/* totally fun carousel styles */ 
 
 .flickity-button {
     background: none !important;
@@ -274,81 +317,6 @@ video {
 }
 
 
-/* LAYOUT STYLES */
-
-.intro {
-	font-size: 1.4em;
-	line-height: 1.4;
-}
-
-h3.section-title {
-	text-align: center;
-}
-
-h3.normal-title {
-	text-align: left;
-}
-
-.content-section {
-	padding: 75px 0;
-}
-
-.content-section.paddingoff {
-	padding:0;
-}
-
-.content-section.paddingtop {
-	padding: 75px 0 0 0;
-}
-
-.content-section.paddingbottom {
-	padding: 0 0 75px 0;
-}
-
-
-/* PAGE AND POST STYLES */ 
-
-.content-container ul,
-.content-container ol {
-	margin: 0 0 0 20px;
-}
-
-.content-container ul li,
-.content-container ol li {
-	list-style: disc;
-}
-
-blockquote {
-	margin: 20px;
-	padding: 0px 20px;
-	border-left: 1px solid #ccc;
-	font-style: italic;
-}
-
-.article {
-	padding: 0 0 75px 0 !important;
-}
-
-.meta-section {
-	margin-top: 20px;
-}
-
-.meta {
-	font-size: .9em;
-	margin:0;
-}
-
-.prevnext {
-	text-align: center;
-	margin-top: 40px;
-}
-
-a[rel="prev"] {
-	float: left;
-}
-a[rel="next"] {
-	float: right;
-}
 
 
 /* Footer Styles */
