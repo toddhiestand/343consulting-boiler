@@ -129,6 +129,16 @@ a.button.large {
   z-index: 999999999;
 }
 
+.wide-container.paddingon {
+	padding: 50px 0;
+}
+.wide-container.paddingtop {
+	padding-top: 50px;
+}
+.wide-container.paddingbottom {
+	padding-bottom: 50px;
+}
+
 /* change these according to the theme colors */
 .wide-container.dark {
 	background: #000;
