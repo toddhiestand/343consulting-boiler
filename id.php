@@ -1,4 +1,4 @@
-<div class="wide-container header-container pin" id="myHeader">
+<div class="wide-container header-container pin">
 	<div class="container max">
 		<header class="row">
 			<div class="col span_6 siteid">

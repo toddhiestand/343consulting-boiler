@@ -115,12 +115,18 @@ a.button.large {
 	font-size: 1.4em;
 }
 
-#myHeader.sticky {
-  position: fixed;
-  top: 0;
+/* pin dat nav */
+
+.pin {
   width: 100%;
-  background: #fff;
-  z-index: 9999;
+  position: relative;
+  background: none;
+}
+
+.pinned {
+  position: fixed !important;
+	background: #f6f7ef;
+  z-index: 999999999;
 }
 
 /* change these according to the theme colors */
@@ -281,7 +287,6 @@ a[rel="prev"] {
 a[rel="next"] {
 	float: right;
 }
-
 
 /* totally fun carousel styles */ 
 

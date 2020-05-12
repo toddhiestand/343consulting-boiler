@@ -111,6 +111,7 @@ function enqueue_scripts() {
   wp_register_script( 'flickityscript', get_template_directory_uri() . '/assets/scripts/flickity.pkgd.min.js', array(), true,true );
   wp_register_script( 'fancybox-js', get_template_directory_uri() . '/assets/scripts/jquery.fancybox.min.js', array(), true,true );
   wp_register_script( 'pushy', get_template_directory_uri() . '/assets/scripts/pushy.js', array(), true,true );
+  wp_register_script( 'pin', get_template_directory_uri() . '/assets/scripts/pin.js', array(), true,true );
 
   // enqueue the enqueue the styles
   wp_enqueue_style('style');
@@ -126,6 +127,7 @@ function enqueue_scripts() {
   wp_enqueue_script( 'pushy' );
   wp_enqueue_script( 'flickityscript' );
   wp_enqueue_script( 'fancybox-js' );
+  wp_enqueue_script( 'pin' );
 
 }
 

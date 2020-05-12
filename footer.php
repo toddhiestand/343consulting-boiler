@@ -76,21 +76,6 @@ $(document).ready(function() {
 			scrollToElement('#scrollsection4');
 		});
 
-	$('#scrolltosection5').click(function (e) {
-			e.preventDefault();
-			scrollToElement('#scrollsection5');
-		});
-
-	$('#scrolltosection6').click(function (e) {
-			e.preventDefault();
-			scrollToElement('#scrollsection6');
-		});
-
-	$('#scrolltosection7').click(function (e) {
-			e.preventDefault();
-			scrollToElement('#scrollsection7');
-		});
-
 	
 });
 
