@@ -8,9 +8,10 @@
 		<!-- mobile meta (hooray!) -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
-	
-	<!-- if page is content page -->
+		<title><?php bloginfo( 'name' ); ?> - <?php wp_title( '|' ); ?></title>
+
+	<!-- if we aren't using Yoast for some reason 
+	 if page is content page 
 	<?php if (is_single()) { ?>
 		<meta property="og:url" content="<?php the_permalink() ?>"/>
 		<meta property="og:title" content="<?php single_post_title(''); ?>" />
@@ -18,13 +19,14 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); }?>" />
 
-	<!-- if page is others -->
+	 if page is others 
 	<?php } else { ?>
 		<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="<?php the_field('social_sharing_image','option');?>" /> 
 	<?php } ?>
+	-->
 
 	<?php wp_head(); ?>
 

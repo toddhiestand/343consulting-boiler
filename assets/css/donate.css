@@ -1,0 +1,126 @@
+.donateform {
+	padding: 30px;
+	background: #fff;
+	width: 500px;
+}
+
+
+.donateform .gfield_radio {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.donateform .gfield_radio li {
+	margin:0;
+}
+
+.donateform .gfield_radio li:last-child {
+	font-size: 12px;
+}
+
+.donateform .gfield_radio input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.donateform .gfield_radio input[type="text"] {
+	width: 100% !important; 
+	height: 62px;
+	background: #f0f0f0;
+	position: relative !important;
+	color: #2c7bb2;
+	font-weight: 700;
+	font-size: 2em !important;
+	padding: 10px 16px !important;
+	margin-top: 0;
+}
+
+.donateform .gfield_radio label {
+	background-color: #f0f0f0;
+	color: #2c7bb2;
+	font-weight: 700;
+	font-size: 2em !important;
+	width: 100% !important; 
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	transition: all 0.1s ease-in-out;
+}
+
+.donateform .gfield_radio label:hover {
+  cursor: pointer;
+}
+
+.donateform .gfield_radio input:checked + label {
+  background-color: #2c7bb2;
+  color: #fff;
+  box-shadow: none;
+}
+
+.donateform input[type="checkbox"] {
+	margin-top: 0 !important;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label {
+	text-transform: uppercase;
+	margin-top: 6px;: 
+}
+
+.donateform input[type=submit] {
+	width: 100% !important;
+	font-size: 1.4em !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label  {
+	max-width: 100% !important;
+} 
+
+.gform_wrapper .donateform .gfield_checkbox li input, 
+.gform_wrapper .donateform .gfield_checkbox li input[type=checkbox], 
+.gform_wrapper .donateform .gfield_radio li input[type=radio] {
+	 position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px !important;
+    width: 1px !important;
+    border: 0;
+    overflow: hidden;
+}
+
+.gform_wrapper .donateform .gfield_checkbox li {
+	border-top: 1px solid #ccc;
+	padding-top: 30px;
+
+}
+
+.gform_wrapper .donateform .gfield_checkbox li label {
+  background-color: #f0f0f0;
+  color: #2c7bb2;
+  font-weight: 700;
+	padding: 15px;
+	width: 100%;
+	margin-top: 30px
+}
+
+.gform_wrapper ul.gfield_checkbox li label:before {
+  font-family: "Font Awesome 5 Pro"; 
+  font-weight: 900; 
+  content: "\f021";
+  color: #2c7bb2;
+  padding: 0 10px;
+}
+
+ul.gfield_checkbox li input[type=checkbox]:checked+label,
+ul.gfield_checkbox li input[type=checkbox]:checked+label:before {
+    color: #fff;
+     background-color: #2c7bb2;
+
+}

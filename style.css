@@ -7,15 +7,10 @@ Author: Todd Hiestand
 Author URI: http://www.343consulting.com
 */
 
-/* initial colors 
-main color to find and replace:  00bf00
-secondary color to find and replace: ffce00 ;
-*/
 
 /* TYPOGRAPHY AND TEXT STYLES */
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
 	background: #fff;
 	font-size: 18px;
@@ -24,7 +19,6 @@ body {
 }
 
 .smalltext {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 12px;
@@ -45,12 +39,6 @@ h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1em; }
 h6 { font-size:	1em; }
-
-ol,ul {margin: 0px;}
-
-.article li {margin: 10px 30px;}
-
-ol {list-style-type: decimal;}
 
 a {
 	text-decoration: none;
@@ -100,60 +88,7 @@ a.button:hover {
 	background: #3cedff;
 }
 
-a.button.small {
-	padding: 8px 15px;
-	font-size: .9em;
-}
-
-a.button.medium {
-	padding: 15px 30px;
-	font-size: 1.2em;
-}
-
-a.button.large {
-	padding: 20px 40px;
-	font-size: 1.4em;
-}
-
-/* pin dat nav */
-
-.pin {
-  width: 100%;
-  position: relative;
-  background: none;
-}
-
-.pinned {
-  position: fixed !important;
-	background: #f6f7ef;
-  z-index: 999999999;
-}
-
-.wide-container.paddingon {
-	padding: 50px 0;
-}
-.wide-container.paddingtop {
-	padding-top: 50px;
-}
-.wide-container.paddingbottom {
-	padding-bottom: 50px;
-}
-
-/* change these according to the theme colors */
-.wide-container.dark {
-	background: #000;
-	color: #fff;
-}
-
-.wide-container.grey {
-	background: #f0f0f0;
-}
-
-.wide-container.light {
-	background: #fff;
-}
-
-/* LOGO */
+/* SITE LOGO */
 
 .siteid h1 {
 	margin: 10px 0;
@@ -171,6 +106,47 @@ a.button.large {
 	text-indent: 119%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+/* pin dat nav */
+
+.pin {
+  width: 100%;
+  position: relative;
+  background: none;
+}
+
+.pinned {
+  position: fixed !important;
+	background: #f6f7ef;
+  z-index: 999999999;
+}
+
+/* make some padding on those content sections possible */
+
+.wide-container.paddingon {
+	padding: 50px 0;
+}
+.wide-container.paddingtop {
+	padding-top: 50px;
+}
+.wide-container.paddingbottom {
+	padding-bottom: 50px;
+}
+
+/* change these according to the theme colors */
+
+.wide-container.dark {
+	background: #000;
+	color: #fff;
+}
+
+.wide-container.grey {
+	background: #f0f0f0;
+}
+
+.wide-container.light {
+	background: #fff;
 }
 
 /* Let's make a fancy alert bar */
@@ -277,7 +253,7 @@ h3.normal-title {
 	text-align: left;
 }
 
-/* PAGE AND POST STYLES */ 
+/* Page and post styles */ 
 
 blockquote {
 	margin: 20px;
@@ -332,8 +308,6 @@ a[rel="next"] {
 }
 
 
-
-
 /* Footer Styles */
 
 .baseline p {
@@ -352,54 +326,6 @@ p.by img {
 	width: 60px;
 	height: auto;
 	margin: 10px auto;
-}
-
-
-/* PAGINATION STYLES */
-
-.pagination { 
-	float: left; 
-	width: 100%; 
-}
-
-.pagination ul { 
-	list-style: none; 
-	margin: 2em auto; 
-	padding: 0; 
-	text-align: center; 
-	color: #555555; 
-	font-size: 90%; 
-}
-
-.pagination ul li { 
-	display: inline; 
-}
-
-.pagination ul a.page-numbers { 
-	background-color: #EEEEEE; 
-	margin: 2px;
-	padding: 10px 10px; 
-	display: inline-block; 
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
-	border-radius: 2px; 
-	font-weight: 700; 
-	line-height: 100%;
-}
-
-.pagination ul a:hover { 
-	background: #ffce00; color: #fff; 
-}
-
-.pagination ul span.current { 
-	background: #00bf00; 
-	color: #fff; 
-	display: inline-block; 
-	padding: 10px 10px; 
-	-webkit-border-radius: 2px; 
-	-moz-border-radius: 2px; 
-	border-radius: 2px; 
-	line-height: 100%;
 }
 
 /* STYLES FOR ODD AND INTERESTING THINGS */ 
@@ -424,7 +350,7 @@ img {
 	display: block;
 }
 
-/* WordPress Core Styles */
+/* WordPress Core Styles if we delete these the world will explode */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -528,4 +454,52 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+/* PAGINATION STYLES */
+
+.pagination { 
+	float: left; 
+	width: 100%; 
+}
+
+.pagination ul { 
+	list-style: none; 
+	margin: 2em auto; 
+	padding: 0; 
+	text-align: center; 
+	color: #555555; 
+	font-size: 90%; 
+}
+
+.pagination ul li { 
+	display: inline; 
+}
+
+.pagination ul a.page-numbers { 
+	background-color: #EEEEEE; 
+	margin: 2px;
+	padding: 10px 10px; 
+	display: inline-block; 
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px; 
+	font-weight: 700; 
+	line-height: 100%;
+}
+
+.pagination ul a:hover { 
+	background: #ffce00; color: #fff; 
+}
+
+.pagination ul span.current { 
+	background: #00bf00; 
+	color: #fff; 
+	display: inline-block; 
+	padding: 10px 10px; 
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px; 
+	line-height: 100%;
+}
+
 

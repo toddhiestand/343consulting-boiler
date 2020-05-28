@@ -97,6 +97,7 @@ remove_action('welcome_panel', 'wp_welcome_panel');
 function enqueue_scripts() {
 
   // register the styles
+  wp_register_style( 'reset', get_template_directory_uri() . '/assets/styles/reset.css', array(), '', 'all' );
   wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '', 'all' );
   wp_register_style( 'grid', get_template_directory_uri() . '/assets/css/responsive.gs.24col.css', array(), '', 'all' );
   wp_register_style( 'mobile', get_template_directory_uri() . '/assets/css/mobile.css', array(), '', 'all' );
@@ -114,6 +115,7 @@ function enqueue_scripts() {
   wp_register_script( 'pin', get_template_directory_uri() . '/assets/scripts/pin.js', array(), true,true );
 
   // enqueue the enqueue the styles
+  wp_enqueue_style('reset');
   wp_enqueue_style('style');
   wp_enqueue_style('pushy');
   wp_enqueue_style('flickity');
@@ -184,5 +186,6 @@ add_action('login_head', 'custom_login');
          echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&dt=spam&c='.$id.'">spam</a>';
      }
  }
+
 
 ?>
