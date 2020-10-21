@@ -80,15 +80,14 @@ https://flickity.metafizzy.co
 
 .flickity-prev-next-button {
   top: 50%;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 60px;
   border-radius: 50%;
-  /* vertically center */
   transform: translateY(-50%);
 }
 
-.flickity-prev-next-button.previous { left: 10px; }
-.flickity-prev-next-button.next { right: 10px; }
+.flickity-prev-next-button.previous { left: -100px; }
+.flickity-prev-next-button.next { right: -100px; }
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;

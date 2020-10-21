@@ -2,20 +2,27 @@
 Theme Name: 343 Consulting
 Theme URI: http://www.343consulting.com
 Description: Created by 343 Consulting as a base theme for 343 Consulting web development projects 
-Version: 1.0
+Version: 2.0
 Author: Todd Hiestand
 Author URI: http://www.343consulting.com
 */
 
+/* Primary color: fd1cdc; */
+/* Secondary color: 1EAEDB; */
 
 /* TYPOGRAPHY AND TEXT STYLES */
 
+html {
+  font-size: 62.5%; 
+}
+
 body {
-	color: #000;
-	background: #fff;
-	font-size: 18px;
-	line-height: 1.2;
-	margin: 0;
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; 
+  margin:0;
 }
 
 .smalltext {
@@ -25,20 +32,33 @@ body {
 	margin:0;
 }
 
-p { margin: .7em 0; }
+p {
+  margin-top: 0; }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-	margin: .7em 0;
-	line-height: 1.2;
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #fd1cdc; 
+}
+a:hover {
+  color: #0FA0CE; 
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1em; }
-h6 { font-size:	1em; }
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700; 
+}
+
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 a {
 	text-decoration: none;
@@ -49,14 +69,11 @@ a:hover {
 	color: #ffce00;
 }
 
-/* fancy hr for creating breaks in content */
 hr {
-	margin: 30px auto;
-	width: 50%;
-	background-color: #ccc;
-  border: 0 none;
-  color: #ccc;
-  height: 1px;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; 
 }
 
 strong {font-weight: bold;}
@@ -64,29 +81,229 @@ i, em {font-style: italic;}
 
 iframe {max-width: 100%;}
 
-a.button, input.button, input[type="submit"] { 
-	color: #fff; 	
-	font-size: .8em;
-	font-weight: 400;
-	text-transform: uppercase; 
-	letter-spacing: 1px;
-	text-decoration: none; 
-	border: none; 
-	background: #fd1cdc;
-	padding: 10px 20px; 
-	-webkit-border-radius: 0px; 
-	-moz-border-radius: 0px; 
-	border-radius: 0px; 
-	-webkit-transition: background 0.3s ease-in-out;
-	-moz-transition: background 0.3s ease-in-out; 
-	-ms-transition: background 0.3s ease-in-out; 
-	-o-transition: background 0.3s ease-in-out; 
-	transition: background 0.3s ease-in-out; 
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #fff;
+  background: #fd1cdc;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border: 1px solid #fd1cdc;
+  cursor: pointer;
+  box-sizing: border-box; 
 }
 
-a.button:hover {
-	background: #3cedff;
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #fff;
+  border-color: #fff;
+  background: #1EAEDB;
+  outline: 0; 
 }
+
+.button.button-secondary,
+button.button-secondary,
+input[type="submit"].button-secondary,
+input[type="reset"].button-secondary,
+input[type="button"].button-secondary {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+.button.button-secondary:hover,
+button.button-secondary:hover,
+input[type="submit"].button-secondary:hover,
+input[type="reset"].button-secondary:hover,
+input[type="button"].button-secondary:hover,
+.button.button-secondary:focus,
+button.button-secondary:focus,
+input[type="submit"].button-secondary:focus,
+input[type="reset"].button-secondary:focus,
+input[type="button"].button-secondary:focus {
+  color: #FFF;
+  background-color: #fd1cdc;
+  border-color: #fd1cdc; 
+}
+
+.button.button-ghost,
+button.button-ghost,
+input[type="submit"].button-ghost,
+input[type="reset"].button-ghost,
+input[type="button"].button-ghost {
+  color: #fd1cdc;
+  background-color: transparent;
+  border-color: #fd1cdc; }
+.button.button-ghost:hover,
+button.button-ghost:hover,
+input[type="submit"].button-ghost:hover,
+input[type="reset"].button-ghost:hover,
+input[type="button"].button-ghost:hover,
+.button.button-ghost:focus,
+button.button-ghost:focus,
+input[type="submit"].button-ghost:focus,
+input[type="reset"].button-ghost:focus,
+input[type="button"].button-ghost:focus {
+  color: #FFF;
+  background-color: #fd1cdc;
+  border-color: #fd1cdc; 
+}
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
 
 /* SITE LOGO */
 
@@ -118,35 +335,8 @@ a.button:hover {
 
 .pinned {
   position: fixed !important;
-	background: #f6f7ef;
-  z-index: 999999999;
-}
-
-/* make some padding on those content sections possible */
-
-.wide-container.paddingon {
-	padding: 50px 0;
-}
-.wide-container.paddingtop {
-	padding-top: 50px;
-}
-.wide-container.paddingbottom {
-	padding-bottom: 50px;
-}
-
-/* change these according to the theme colors */
-
-.wide-container.dark {
-	background: #000;
-	color: #fff;
-}
-
-.wide-container.grey {
-	background: #f0f0f0;
-}
-
-.wide-container.light {
 	background: #fff;
+  z-index: 999999999;
 }
 
 /* Let's make a fancy alert bar */
@@ -170,11 +360,11 @@ a.button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .hero:after {
@@ -194,10 +384,11 @@ a.button:hover {
 .hero.tall {height: 100vh;}
 
 .hero-inner {
-	width: 65%;
-	padding: 0px;
-	z-index: 9;
-	position: relative;
+  width: 1140px;
+  max-width: 1140px;
+  padding: 0 20px;
+  z-index: 9;
+  position: relative;
 }
 
 .hero h1 {
@@ -207,6 +398,7 @@ a.button:hover {
 
 .hero h2 {
 	color: #fff;
+	font-weight: 300;
 }
 
 /* Video hero */
@@ -243,6 +435,7 @@ video {
 .intro {
 	font-size: 1.4em;
 	line-height: 1.4;
+	margin-bottom: 30px;
 }
 
 h3.section-title {
@@ -253,7 +446,140 @@ h3.normal-title {
 	text-align: left;
 }
 
+/* Two COlumn flexbox
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.col.flexed {
+	display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 450px;
+}
+
+.col.flexed.flexedleft {
+	align-items: flex-start;
+}
+
+.blockrow {
+	display: flex;
+	flex-direction: row;
+}
+.blockrow.right {
+	flex-direction: row-reverse;
+}
+
+.imageblock {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+	height: 500px;
+	width: 50%;
+	background: #f0f0f0;
+}
+
+.imageblockcontent {
+	width: 80%;
+}
+
+.blockimg {
+	width:50%;
+	background-size: cover;
+	height: 500px;
+	background-position: center center;
+}
+
+/* Create possibility of having a shadowbox
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.shadowsection {
+	background: #f5f5f7;
+	padding: 50px 0;
+}
+
+.shadowbox {
+	border-radius: 10px;
+	background: #fff;
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  z-index: 2;
+  background-repeat: no-repeat;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  background-position: center center;
+  -webkit-box-shadow: 4px 12px 40px 6px rgba(0,0,0,0.09);
+  box-shadow: 4px 12px 40px 6px rgba(0,0,0,0.09);
+  padding: 75px 75px;
+}
+
+
+/* Accordion Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#accordion h3 {
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	padding: 20px 0;
+	margin:0;
+	cursor: pointer;
+	color: #fd1cdc;
+}
+
+#accordion h3:before {
+	content: "\f067";  /* this is your text. You can also use UTF-8 character codes as I do here */
+	font-family: "Font Awesome 5 Pro";
+	color: #ccc;
+	padding: 5px 10px;
+ }
+
+#accordion h3.ui-state-active:before {
+	content: "\f068";  /* this is your text. You can also use UTF-8 character codes as I do here */
+	font-family: "Font Awesome 5 Pro";
+	color: #444;
+	padding: 5px 10px;	
+}
+
+.accordion-section {
+	padding: 20px 0px;
+}
+
+#accordion h3:-moz-any-link:focus { outline: none; }
+#accordion h3:focus {outline: none; }
+#accordion h3:active {outline: none; font-weight:bold;}
+
 /* Page and post styles */ 
+
+.articles-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	padding: 40px 0;
+}
+
+.article { 
+ 	text-align: left;
+ 	width: 29.33%;
+ 	margin-right:  4%;
+  margin-bottom: 50px;
+}
+
+.article .smalltext {
+	font-weight: bold;
+}
+
+.article img {
+	margin: 20px 0;
+}
 
 blockquote {
 	margin: 20px;
@@ -277,8 +603,9 @@ a[rel="next"] {
 /* totally fun carousel styles */ 
 
 .flickity-button {
-    background: none !important;
-    color: #fff !important;
+  color: #fd1cdc !important;
+  background: #f0f0f0 !important;
+
 }
 
 .flickity-viewport {
@@ -286,25 +613,9 @@ a[rel="next"] {
 }
 
 .carousel-cell {
-  width: 100%;
-  counter-increment: gallery-cell;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-cell.hero-cell {
-	height: 90vh;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-.carousel-cell .hero-content{
-	margin: 10%;
-	background: rgba(0, 0, 0, .7);
-	padding: 50px;
-	color: #fff;
-	width: 35%;
+  width: 31.8%;
+	counter-increment: gallery-cell;
+ 	margin-right: 4%;
 }
 
 
@@ -312,6 +623,10 @@ a[rel="next"] {
 
 .baseline p {
 	text-align: center;
+}
+
+.baseline ul {
+	list-style: none;
 }
 
 p.by{

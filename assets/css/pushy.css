@@ -1,4 +1,4 @@
-/*! Pushy - v1.1.0 - 2017-1-30
+/*! Pushy - v1.3.0 - 2019-6-25
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -9,19 +9,19 @@
   height: 100%;
   top: 0;
   z-index: 9999;
-  background: #191918;
+  background: #fff;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */
 }
 .pushy a {
   display: block;
-  color: #b3b3b1;
-  padding: 15px 30px;
+  color: #fd1cdc;
+  padding: 10px 30px;
   text-decoration: none;
 }
 .pushy a:hover {
-  color: #FFF;
+  color: #3a72ba;
 }
 .pushy ul:first-child {
   margin-top: 10px;
@@ -52,16 +52,16 @@
 }
 
 .pushy-right {
-  -webkit-transform: translate3d(200px, 0, 0);
-  -ms-transform: translate3d(200px, 0, 0);
-  transform: translate3d(200px, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
 }
 
 .pushy-open-right #container,
 .pushy-open-right .push {
-  -webkit-transform: translate3d(-200px, 0, 0);
-  -ms-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
 .pushy-open-left .pushy,
@@ -79,11 +79,11 @@
 #container,
 .pushy,
 .push {
-  transition: transform .7s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
 .pushy-content {
-  transition: visibility .7s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: visibility .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
 /* Site Overlay */
@@ -101,8 +101,8 @@
   left: 0;
   z-index: 9998;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: fade 300ms;
-  animation: fade 300ms;
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
 }
 
 @keyframes fade {
@@ -126,15 +126,11 @@
   /* Submenu Buttons */
   /* Submenu Icon */
 }
-
-.pushy-submenu ul {
+.pushy-submenu > ul {
   padding-left: 15px;
   transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
-
-
-
-.pushy-submenu ul .pushy-link {
+.pushy-submenu > ul .pushy-link {
   transition: opacity 0.2s ease-in-out;
 }
 .pushy-submenu button {
@@ -169,7 +165,7 @@
 }
 
 /* Submenu Movement */
-.pushy-submenu-closed ul {
+.pushy-submenu-closed > ul {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
@@ -181,15 +177,15 @@
 .pushy-submenu-open {
   /* Submenu Icon */
 }
-.pushy-submenu-open ul {
+.pushy-submenu-open > ul {
   max-height: 1000px;
   visibility: visible;
 }
 .pushy-submenu-open .pushy-link {
   opacity: 1;
 }
-.pushy-submenu-open a::after,
-.pushy-submenu-open button::after {
+.pushy-submenu-open > a::after,
+.pushy-submenu-open > button::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
   transform: translateY(-50%) rotate(90deg);

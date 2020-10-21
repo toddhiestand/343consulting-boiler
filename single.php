@@ -12,11 +12,11 @@
 <div class="wide-container">
 	<div class="container">		
 		<div class="row paddingon">
+			      				<p><a href="/blog"><i class="fal fa-long-arrow-left"></i> All Posts</a></p>
+
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<h2><?php the_title(); ?></h2>
 					<?php the_content(); ?>
-					<?php the_tags('<p class="smalltext">Tags: ', ', ', '</p>'); ?>
-					<p class="smalltext"> Categories: <?php the_category(',') ?></p>
 					<div class="prevnext">
 						<?php previous_post_link('%link', 'Previous Post'); ?>
 						<?php next_post_link('%link', 'Next Post'); ?>

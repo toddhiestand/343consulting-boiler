@@ -1,22 +1,20 @@
 
 .pushy {
-  padding: 30px;
+  padding: 2%;
+}
+
+.menu-btn {
+  display: none;
 }
 
 .mobilemenu ul {
   margin:0;padding:0;
   list-style: none; 
-  text-transform: uppercase;
+  font-size: 2em;
 }
 
 .mobilemenu ul li a {
-  text-align: center;
-  font-size: 1.6em;
-}
-
-.mobilemenu ul li.closebtn a {
-  font-size: .8em;
-  letter-spacing: 2px;
+  text-align: left;
 }
 
 .mobilemenu ul li {
@@ -24,31 +22,27 @@
 }
 
 .mobilemenu ul ul {
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-  background: #333;
-  font-size: .6em;
+  background: #f0f0f0;
+  font-size: .5em;
 }
 
 .mobilemenu ul li.menu-item-has-children a:after {
   content: "+"; /* Insert content that looks like bullets */
   padding-left: 10px;
-  color: #fff;
+  color: #fd1cdc;
 }
 
 .mobilemenu ul.sub-menu li a:after {
   content: ""; /* Insert content that looks like bullets */
   padding-left: 10px;
-  color: #fff;
+  color: #fd1cdc;
 }
 
-.navigation {
-  padding: 25px 0;
-}
+
 
 #cssmenu ul {
   text-align: right;
-  padding: 30px 0;
+  padding: 0px 0;
 }
 
 
@@ -68,6 +62,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 9999;
+}
+
+#cssmenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 93px;
 }
 
 #cssmenu:after,
@@ -107,11 +108,9 @@
 /* primary color */
 #cssmenu > ul > li > a {
   padding: 15px 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: #fd1cdc;
-  font-weight: 700;
-  text-transform: uppercase;
+  color: #fd1cdc; /* color of the menu link items */
 }
 
 /* hover color */
@@ -193,10 +192,9 @@
 #cssmenu ul ul li a {
   border-bottom: 1px solid rgba(150, 150, 150, 0.15);
   padding: 15px 15px;
-  width: 300px;
+  width: 200px;
   text-decoration: none;
   color: #dddddd;
-  font-weight: 400;
   background: #333333;
   text-align: left;
 }
@@ -207,7 +205,7 @@
 #cssmenu ul ul li:hover > a,
 #cssmenu ul ul li a:hover {
   color: #ffffff;
-  background: #0f2f35;
+  background: #000;
 }
 #cssmenu ul ul li.menu-item-has-children > a:after {
   position: absolute;

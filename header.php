@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
 
-<html>
+<html <?php language_attributes(); ?> class="is-fullheight">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
-		<!-- mobile meta (hooray!) -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-		<title><?php bloginfo( 'name' ); ?> - <?php wp_title( '|' ); ?></title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<script src="https://kit.fontawesome.com/04b8b33d61.js" crossorigin="anonymous"></script>
+	<title><?php bloginfo( 'name' ); ?> - <?php wp_title( '|' ); ?></title>
 
 	<!-- if we aren't using Yoast for some reason 
 	 if page is content page 
@@ -30,23 +29,19 @@
 
 	<?php wp_head(); ?>
 
-	<script src="https://kit.fontawesome.com/04b8b33d61.js" crossorigin="anonymous"></script>
 
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<div class="pushy pushy-left mobilemenu">
-	<a href="<?php echo site_url(); ?>"><img class="mobilelogo" width="200" src="<?php the_field('site_logo','option');?>" alt="<?php bloginfo('name'); ?>"></a>
+<div class="pushy pushy-right mobilemenu">
+	<div class="mobile-id">
+		<a href="<?php echo site_url(); ?>"><img class="mobilelogo" width="200" src="<?php the_field('site_logo','option');?>" alt="<?php bloginfo('name'); ?>"></a>
+		<p class="closebtn pushy-link"><a href="#"><i class="fa fa-times"></i></a></p>
+	</div>
 	<?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'container_class' => '' ) ); ?>		
 	
-	<div class="menu-content">
-		<p><a style="color: #fff" href="tel:5039415473">Call us:<br/> 503-941-5473</a></p>
-		<p>Address<br/>
-			11738 SE Durango Ct.<br/>
-		  Clackamas, OR 97015</p>
-	</div>
 </div>
 
 <div class="site-overlay"></div>

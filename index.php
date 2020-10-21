@@ -13,28 +13,24 @@ get_header();
 
 
 <div class="wide-container">
-	<div class="container narrow">		
-		<div class="row paddingon">
+	<div class="container">		
+		<div class="articles-container">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div class="article col span_24">
-					<div class="row">
-						<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+					<div class="article">	
+					<p class="smalltext"><?php the_time('F jS, Y'); ?></p>
+					<?php the_post_thumbnail('image-square'); ?>			
+						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 					</div>
-					<div class="row gutters">
-						<div class="col span_8">
-							<?php the_post_thumbnail('image-square'); ?>						
-						</div>
-						<div class="col span_16">
-							<?php the_excerpt(); ?>
-						</div>
-					</div>		
-				</div>
 				<?php endwhile; else: ?>
-				<?php _e('Sorry, no posts matched your criteria.'); ?>
+				
+				<?php _e('Sorry, there are no posts at this time.'); ?>
 				<?php endif; ?>
-				<?php get_template_part( 'inc/feature', 'pagination' ); ?>
+		</div>
+		<div class="row">
+							<?php get_template_part( 'inc/feature', 'pagination' ); ?>
+
+		</div>
 		</div>
 	</div>
-</div>
 
 <?php get_footer();?>
