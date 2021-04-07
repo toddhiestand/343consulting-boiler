@@ -4,7 +4,9 @@
 	  	<?php $headerimage = wp_get_attachment_image_src(get_sub_field('background_image'), 'header-image'); ?>
 
 	  	<div class="wide-container hero <?php the_sub_field('header_size');?>" style="color:#fff;background-image: url(<?php echo $headerimage[0]; ?>);background-position: <?php the_sub_field('background_image_position');?>;">
-					<div class="hero-inner">
+					<div class="container">
+					<div class="row center-xs middle-xs">
+						<div class="hero-inner col-xs-12">
 					  	<?php if( $headertitle = get_sub_field('title') ){ ?>
               		<h1><?php echo $headertitle; ?></h1>
             	<?php }?>  	
@@ -12,6 +14,8 @@
               		<?php echo $headersubtitle; ?>
             	<?php }?>  	
 					</div>
+				</div>
+			</div>
 			</div>
 
 		<?php elseif(get_row_layout() == "video_header"): // layout: General Content with bg image ?> 

@@ -1,10 +1,10 @@
 /*  
-Theme Name: 343 Consulting
-Theme URI: http://www.343consulting.com
-Description: Created by 343 Consulting as a base theme for 343 Consulting web development projects 
+Theme Name: Liminal Creative
+Theme URI: http://www.liminalcreative.com
+Description: Created by Liminal Creative as a base theme for Liminal Creative web development projects 
 Version: 2.0
 Author: Todd Hiestand
-Author URI: http://www.343consulting.com
+Author URI: http://www.liminalcreative.com
 */
 
 /* Primary color: fd1cdc; */
@@ -12,15 +12,12 @@ Author URI: http://www.343consulting.com
 
 /* TYPOGRAPHY AND TEXT STYLES */
 
-html {
-  font-size: 62.5%; 
-}
 
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 18px; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; 
   margin:0;
 }
@@ -53,12 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; 
 }
 
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+h1 { font-size: 2.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 1.8rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 1.6rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 1.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.2rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1rem; line-height: 1.6;  letter-spacing: 0; }
 
 a {
 	text-decoration: none;
@@ -187,6 +184,7 @@ select {
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
+  width: 100%;
   box-shadow: none;
   box-sizing: border-box; }
 /* Removes awkward default styles on some inputs for iOS */
@@ -226,7 +224,8 @@ fieldset {
   border-width: 0; }
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline; }
+  display: inline;
+  width: inherit; }
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
@@ -304,20 +303,26 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 
+/* Site Logo
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* SITE LOGO */
+.siteid {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
 
 .siteid h1 {
-	margin: 10px 0;
+	margin: 0px 0;
   width: 300px;
-  height: 80px;
+  height: 66px;
   padding: 0px 0;
 }
 
 .siteid	h1 a {
 	display: block;
   width: 300px;
-  height: 80px;
+  height: 66px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-indent: 119%;
@@ -325,7 +330,8 @@ form {
   overflow: hidden;
 }
 
-/* pin dat nav */
+/* Pinned Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .pin {
   width: 100%;
@@ -339,7 +345,8 @@ form {
   z-index: 999999999;
 }
 
-/* Let's make a fancy alert bar */
+/* Alert Bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .alert {
 	background: #f0f0f0;
@@ -352,7 +359,8 @@ form {
 	font-size: .9em;
 }
 
-/* HERO STYLES */
+/* Hero Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .hero {
   width: 100vw;
@@ -384,8 +392,7 @@ form {
 .hero.tall {height: 100vh;}
 
 .hero-inner {
-  width: 1140px;
-  max-width: 1140px;
+ 
   padding: 0 20px;
   z-index: 9;
   position: relative;
@@ -401,7 +408,8 @@ form {
 	font-weight: 300;
 }
 
-/* Video hero */
+/* Video Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .video-header {
 	position: relative;
@@ -423,30 +431,44 @@ video {
   transition: 1s opacity;
 }
 
-/* Simple header */
+/* Simple Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .simple-header  {
 	padding: 40px 0;
 	text-align: center;
 }
 
-/* Section Layout Styles */
+/* Content Sections 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
 	font-size: 1.4em;
 	line-height: 1.4;
-	margin-bottom: 30px;
 }
 
 h3.section-title {
-	text-align: center;
+	text-align: left;
 }
 
 h3.normal-title {
 	text-align: left;
 }
 
-/* Two COlumn flexbox
+.content-section.grey {
+  background: #f1f1f1;
+}
+
+.content-section.dark {
+  background: #222;
+  color: #fff;
+}
+
+.content-section.dark a {
+  color: #fff;
+}
+
+/* Two Column flexbox
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .col.flexed {
@@ -475,16 +497,11 @@ h3.normal-title {
   align-items: center;
   text-align: left;
 	height: 500px;
-	width: 50%;
 	background: #f0f0f0;
 }
 
-.imageblockcontent {
-	width: 80%;
-}
 
 .blockimg {
-	width:50%;
 	background-size: cover;
 	height: 500px;
 	background-position: center center;
@@ -557,19 +574,11 @@ h3.normal-title {
 #accordion h3:focus {outline: none; }
 #accordion h3:active {outline: none; font-weight:bold;}
 
-/* Page and post styles */ 
 
-.articles-container {
-	display: flex;
-	flex-wrap: wrap;
-
-	padding: 40px 0;
-}
-
+/* Post Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .article { 
  	text-align: left;
- 	width: 29.33%;
- 	margin-right:  4%;
   margin-bottom: 50px;
 }
 
@@ -600,8 +609,9 @@ a[rel="next"] {
 	float: right;
 }
 
-/* totally fun carousel styles */ 
 
+/* Flickity Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .flickity-button {
   color: #fd1cdc !important;
   background: #f0f0f0 !important;
@@ -619,7 +629,8 @@ a[rel="next"] {
 }
 
 
-/* Footer Styles */
+/* Footer Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .baseline p {
 	text-align: center;
@@ -643,21 +654,9 @@ p.by img {
 	margin: 10px auto;
 }
 
-/* STYLES FOR ODD AND INTERESTING THINGS */ 
 
-input {
-	padding: 20px;
-	width: 100%;
-	font-size: 18px;
-}
-
-textarea {
-	border: 1px solid #ccc;
-	padding: 20px;
-	font-size: 18px;
-}
-
-/* IMAGE STYLES */
+/* Image Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 img {
 	max-width: 100%;
@@ -770,7 +769,9 @@ a img.aligncenter {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
-/* PAGINATION STYLES */
+
+/* Pagination Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .pagination { 
 	float: left; 
@@ -816,5 +817,3 @@ a img.aligncenter {
 	border-radius: 2px; 
 	line-height: 100%;
 }
-
-

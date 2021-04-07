@@ -1,7 +1,7 @@
 	<div class="wide-container baseline paddingon">
 	  <div class="container">
-	  	<div class="row gutters">
-	  		<div class="col span_6">
+	  	<div class="row">
+	  		<div class="col-xs-3">
 	  			<h4>Footer Section 1</h4>
 	  			<ul>	
 	  				<li><a href="#">Link</a></li>
@@ -10,7 +10,7 @@
 	  				<li><a href="#">Link</a></li>
 	  			</ul>
 	  		</div>
-	  		<div class="col span_6">
+	  		<div class="col-xs-3">
 	  			<h4>Footer Section 2</h4>
 	  			<ul>	
 	  				<li><a href="#">Link</a></li>
@@ -19,7 +19,7 @@
 	  				<li><a href="#">Link</a></li>
 	  			</ul>
 	  		</div>
-	  		<div class="col span_6">
+	  		<div class="col-xs-3">
 	  			<h4>Footer Section 3</h4>
 	  			<ul>	
 	  				<li><a href="#">Link</a></li>
@@ -28,7 +28,7 @@
 	  				<li><a href="#">Link</a></li>
 	  			</ul>
 	  		</div>
-	  		<div class="col span_6">
+	  		<div class="col-xs-3">
 	  			<h4>Footer Section 4</h4>
 	  			<ul>	
 	  				<li><a href="#">Link</a></li>
@@ -39,9 +39,9 @@
 	  		</div> 
 	  	</div>
 	    <div class="row paddingtop">
-	      <div class="col span_12 centered"> 
+	      <div class="col-sm-12"> 
 	        <p class="smalltext">&copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?></p>
-  	      <p class="by">Site by <a target="_blank" href="https://www.343consulting.com"><img src="<?php bloginfo('template_directory'); ?>/images/343.png" alt="343 Consulting" /></a></p>
+	        <p class="by">Site by <a target="_blank" href="https://liminalcreative.com"><img src="<?php bloginfo('template_directory'); ?>/_images/liminal-dark.png" alt="Liminal Creative"></a></p>
 	     	</div>
 	    </div>
 	  </div>

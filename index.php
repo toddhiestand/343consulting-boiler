@@ -14,11 +14,11 @@ get_header();
 
 <div class="wide-container">
 	<div class="container">		
-		<div class="articles-container">
+		<div class="row paddingtop">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<div class="article">	
+					<div class="article col-xs-12 col-lg-6">	
 					<p class="smalltext"><?php the_time('F jS, Y'); ?></p>
-					<?php the_post_thumbnail('image-square'); ?>			
+						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('image-wide'); ?></a>
 						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 					</div>
 				<?php endwhile; else: ?>
@@ -27,8 +27,7 @@ get_header();
 				<?php endif; ?>
 		</div>
 		<div class="row">
-							<?php get_template_part( 'inc/feature', 'pagination' ); ?>
-
+			<?php get_template_part( 'inc/feature', 'pagination' ); ?>
 		</div>
 		</div>
 	</div>

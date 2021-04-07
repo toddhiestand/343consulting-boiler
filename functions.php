@@ -2,13 +2,13 @@
 
 
 // Includes our custom taxonomies
-// require_once(__DIR__ . '/lib/taxonomies.php');
+// require_once(__DIR__ . '/_lib/taxonomies.php');
 
 // Includes our custom post types
-// require_once(__DIR__ . '/lib/post-types.php');
+// require_once(__DIR__ . '/_lib/post-types.php');
 
 // Includes our custom post types
-// require_once(__DIR__ . '/lib/blocks.php');
+// require_once(__DIR__ . '/_lib/blocks.php');
 
 
 // Register our sidebars
@@ -79,10 +79,10 @@ wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard
 function custom_dashboard_help() {
 echo '
   <h3>Welcome</h3>
-  <p>Your website was built with love and care by Todd at <strong>343 Consulting, LLC</strong>.</p>
+  <p>Your website was built with love and care by <strong>Liminal Creative, Inc.</strong>.</p>
   <h3>Support</h3>
-  <p> If you ever need any help with your website, please contact us at <a href="mailto:todd@343consulting.com">todd@343consulting.com</a>. </p>
-  <p>You can visit us online at <a target="_blank" href="https://343consulting.com">https://343consulting.com</a>.</p>
+  <p> If you ever need any help with your website, please contact us at <a href="mailto:hello@liminalcreative.com">hello@liminalcreative.com</a>. </p>
+  <p>You can visit us online at <a target="_blank" href="https://liminalcreative.com">https://liminalcreative.com</a>.</p>
   '
   ;
 }
@@ -96,30 +96,30 @@ remove_action('welcome_panel', 'wp_welcome_panel');
 function enqueue_scripts() {
 
   // register the styles
-  wp_register_style( 'reset', get_template_directory_uri() . '/assets/styles/reset.css', array(), '', 'all' );
+  wp_register_style( 'reset', get_template_directory_uri() . '/_assets/styles/reset.css', array(), '', 'all' );
   wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '', 'all' );
-  wp_register_style( 'grid', get_template_directory_uri() . '/assets/css/responsive.gs.24col.css', array(), '', 'all' );
-  wp_register_style( 'mobile', get_template_directory_uri() . '/assets/css/mobile.css', array(), '', 'all' );
+  wp_register_style( 'flexboxgrid', get_template_directory_uri() . '/_assets/css/flexgrid.css', array(), '', 'all' );
+  wp_register_style( 'mobile', get_template_directory_uri() . '/_assets/css/mobile.css', array(), '', 'all' );
   wp_register_style( 'fancybox-css', get_template_directory_uri() . '/css/jquery.fancybox.min.css', array(), '', 'all' );
-  wp_register_style( 'pushy', get_template_directory_uri() . '/assets/css/pushy.css', array(), '', 'all' );
-  wp_register_style( 'menu', get_template_directory_uri() . '/assets/css/menu.css', array(), '', 'all' );
-  wp_register_style( 'flickity', get_template_directory_uri() . '/assets/css/flickity.css', array(), '1.1.5', 'all' );
+  wp_register_style( 'pushy', get_template_directory_uri() . '/_assets/css/pushy.css', array(), '', 'all' );
+  wp_register_style( 'menu', get_template_directory_uri() . '/_assets/css/menu.css', array(), '', 'all' );
+  wp_register_style( 'flickity', get_template_directory_uri() . '/_assets/css/flickity.css', array(), '1.1.5', 'all' );
 
   // register the scripts 
   wp_deregister_script('jquery');
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.10.1');
-  wp_register_script( 'flickityscript', get_template_directory_uri() . '/assets/scripts/flickity.pkgd.min.js', array(), true,true );
-  wp_register_script( 'fancybox-js', get_template_directory_uri() . '/assets/scripts/jquery.fancybox.min.js', array(), true,true );
-  wp_register_script( 'pushy', get_template_directory_uri() . '/assets/scripts/pushy.js', array(), true,true );
-  wp_register_script( 'pin', get_template_directory_uri() . '/assets/scripts/pin.js', array(), true,true );
+  wp_register_script( 'flickityscript', get_template_directory_uri() . '/_assets/scripts/flickity.pkgd.min.js', array(), true,true );
+  wp_register_script( 'fancybox-js', get_template_directory_uri() . '/_assets/scripts/jquery.fancybox.min.js', array(), true,true );
+  wp_register_script( 'pushy', get_template_directory_uri() . '/_assets/scripts/pushy.js', array(), true,true );
+  wp_register_script( 'pin', get_template_directory_uri() . '/_assets/scripts/pin.js', array(), true,true );
 
   // enqueue the enqueue the styles
   wp_enqueue_style('reset');
   wp_enqueue_style('style');
   wp_enqueue_style('pushy');
+  wp_enqueue_style('flexboxgrid');  
   wp_enqueue_style('flickity');
   wp_enqueue_style('menu');
-  wp_enqueue_style('grid');
   wp_enqueue_style('fancybox-css');
   wp_enqueue_style('mobile');
   
@@ -140,7 +140,7 @@ add_theme_support('automatic-feed-links');
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
    global $post;
-  return '[...] <div class="read-more"><a class="button small" href="'. get_permalink($post->ID) . '"> Read More</a></div>';
+  return '[...] <div class="read-more"><a class="button" href="'. get_permalink($post->ID) . '"> Read More</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -151,8 +151,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 // additional image sizes
  add_image_size( 'image-square', 300, 300, true ); // 150 pixels wide (and unlimited height)
- add_image_size( 'image-wide', 640, 220, true ); // 400 pixels wide (and unlimited height)
+ add_image_size( 'image-wide', 640, 340, true ); // 400 pixels wide (and unlimited height)
  add_image_size( 'image-single', 640, 420, true ); // 400 pixels wide (and unlimited height)
+ add_image_size( 'image-portrait', 220, 640, true ); // 400 pixels wide (and unlimited height)
 }
 
 // Get rid of self-pings
@@ -167,7 +168,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // Add custom branding to the footer of the admin
  
 function modify_footer_admin () {
-  echo 'Created by <a href="http://343consulting.com">343 Consulting</a>.';
+  echo 'Created by <a href="http://liminalcreative.com">Liminal Creative, Inc.</a>';
 }
 
 add_filter('admin_footer_text', 'modify_footer_admin');
