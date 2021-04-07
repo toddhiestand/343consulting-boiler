@@ -1,6 +1,5 @@
-# 343-boilerplate
-
-A starting point, baseline theme for 343 Consulting WordPress projects.
+# Liminal Creative Boilerplate 
+A starting point, baseline theme for Liminal Creative WordPress projects.
 
 ## Key Features
 - Content section based page layouts using Advanced Custom Fields
@@ -10,8 +9,7 @@ A starting point, baseline theme for 343 Consulting WordPress projects.
 - Sermons archive for churches using custom post-types and taxonomies
 
 ## This theme is indebted to a few key resources
-
-- Responsive Grid system: http://responsive.gs/
+- Flexbox Grid http://flexboxgrid.com/
 - Pushy Menu: https://github.com/christophery/pushy
 
 ## This theme automatically installs the following plugins: 
@@ -19,10 +17,7 @@ A starting point, baseline theme for 343 Consulting WordPress projects.
 - Gravity Forms
 - Custom Editor Styles 
 
-## Advanced Custom Fields import
-- Download an import of the basic content sections from advanced custom fields here: https://github.com/toddhiestand/343consulting-boiler/blob/master/lib/acf-export-2018-03-23.json
-
 ## Contact
-- 343 Consulting helps nonprofits navigate storytelling, fundraising and technology
-- For more info, contact todd@343consulting.com 
-- Visit 343consulting's website at https://www.343consulting.com
+- Liminal Creative helps nonprofits navigate storytelling, fundraising and technology
+- For more info, contact todd@liminalcreative.com 
+- Visit 343consulting's website at https://liminalcreative.com
