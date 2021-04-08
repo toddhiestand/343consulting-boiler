@@ -4,6 +4,7 @@ get_header();
 
 <?php $headerimage = wp_get_attachment_image_src(get_field('blog_header_image','option'), 'header-image'); ?>
 
+
 <div class="wide-container hero short" style="background-image: url(<?php echo $headerimage[0]; ?>);";>
 	<div class="container">
   	<div class="row paddingtop">

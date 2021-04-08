@@ -1,4 +1,4 @@
-# Liminal Creative Boilerplate 
+#Liminal Creative Boilerplate 
 A starting point, baseline theme for Liminal Creative WordPress projects.
 
 ## Key Features

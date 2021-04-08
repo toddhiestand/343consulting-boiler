@@ -1,7 +1,6 @@
 <?php 
-get_header();
+	get_header();
 ?>
-
 
 <div class="wide-container hero short" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' );?>);";>
   <div class="hero-inner reveal">
@@ -22,7 +21,5 @@ get_header();
 		</div>
 	</div>
 </div>
-
-
 
 <?php get_footer(); ?>
