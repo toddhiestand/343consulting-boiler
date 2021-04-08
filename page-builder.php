@@ -1,6 +1,6 @@
 <?php 
 /* 
-Template Name: 343 Page Builder
+Template Name: Liminal Page Builder
 */
 	get_header();
 	get_template_part('_inc/header','options'); 
