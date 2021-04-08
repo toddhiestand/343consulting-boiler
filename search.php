@@ -16,13 +16,19 @@ get_header();
 	<div class="container">		
 		<div role="main" class="row paddingtop">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<div class="article col-xs-12 col-lg-6">	
-				<p class="smalltext"><?php the_time('F jS, Y'); ?></p>
-				<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('image-wide'); ?></a>
-				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-				<?php the_excerpt();?>
-			</div>
-			<?php endwhile; endif; ?>
+					<div class="article col-xs-12 col-lg-6">	
+					<p class="smalltext"><?php the_time('F jS, Y'); ?></p>
+						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('image-wide'); ?></a>
+						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+						<?php the_excerpt();?>
+					</div>
+				<?php endwhile; else: ?>
+				<div class="article col-xs-12">
+					<p style="text-align: center;"><?php _e('Sorry, there are no search results that match that query.'); ?></p>
+					<h3 style="text-align: center;">Try searching again</h3>
+					<?php get_search_form();?>
+				</div>
+				<?php endif; ?>
 		</div>
 			<div class="row">
 				<div class="col span_24">
