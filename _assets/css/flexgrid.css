@@ -2,7 +2,7 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  max-width:1366px;
+  max-width:1140px;
 }
 
 .container-fluid {
@@ -275,7 +275,7 @@
 
 @media only screen and (min-width: 48em) {
   .container {
-    max-width:1366px;
+    max-width:1140px;  
   }
 
   .col-sm,
@@ -506,7 +506,7 @@
 
 @media only screen and (min-width: 64em) {
   .container {
-      max-width:1366px;
+    max-width:1140px;    
   }
 
   .col-md,
@@ -737,7 +737,7 @@
 
 @media only screen and (min-width: 75em) {
   .container {
-    max-width:1366px;  
+    max-width:1140px;  
   }
 
   .col-lg,
@@ -964,4 +964,28 @@
     -ms-flex-order: 1;
     order: 1;
   }
+}
+
+/* Container Widths
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+  max-width:1140px;  
+  padding: 0 2rem;
+}
+
+.container.narrow {
+  max-width: 60%;
+}
+.container.wide {
+  max-width: 80%;
+}
+.container.max {
+  max-width: 100%;
+  padding:0;
+}
+
+.container.max .row {
+    margin-left: 0;
+  margin-right: 0;
 }

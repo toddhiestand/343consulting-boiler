@@ -4,9 +4,9 @@
 	  	<?php $headerimage = wp_get_attachment_image_src(get_sub_field('background_image'), 'header-image'); ?>
 
 	  	<div class="wide-container hero <?php the_sub_field('header_size');?>" style="color:#fff;background-image: url(<?php echo $headerimage[0]; ?>);background-position: <?php the_sub_field('background_image_position');?>;">
-					<div class="container">
+					<div class="container normal">
 					<div class="row center-xs middle-xs">
-						<div class="hero-inner col-xs-12">
+						<div class="hero-inner col-xs-8">
 					  	<?php if( $headertitle = get_sub_field('title') ){ ?>
               		<h1><?php echo $headertitle; ?></h1>
             	<?php }?>  	
@@ -40,7 +40,11 @@
 	
 	    	<div class="wide-container simple-header" style="background: <?php the_sub_field('background_color');?>">
 	    		<div class="container">
-	    			<h1 style="text-align: <?php the_sub_field('title_alignment');?>;color: <?php the_sub_field('title_color');?>; "><?php the_title();?></h1>
+	    			<div class="row center-xs middle-xs">
+	    				<div class="col-xs-6">
+	    					<h1 style="text-align: <?php the_sub_field('title_alignment');?>;color: <?php the_sub_field('title_color');?>; "><?php the_title();?></h1>
+	    				</div>
+	    			</div>
 	    		</div>
 	      </div>
 	    

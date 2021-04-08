@@ -9,23 +9,23 @@
       <div class="container <?php the_sub_field('container_width');?>">
       
         <?php if ('yes' == get_sub_field('add_title')) { ?>   
-              <div class="row title">
-                <div class="col-sm-12">
-                  <h3 class="<?php the_sub_field('heading_type'); ?>"><?php the_sub_field('the_title'); ?></h3>
-                </div>
-              </div>
+          <div class="row title">
+            <div class="col-xs-12">
+              <h3 class="<?php the_sub_field('heading_type'); ?>"><?php the_sub_field('the_title'); ?></h3>
+            </div>
+          </div>
         <?php } ?>
 
         <?php if ('yes' == get_sub_field('add_intro')) { ?>   
-              <div class="row intro">
-                <div class="col-sm-12">
-                  <?php the_sub_field('intro'); ?>
-                </div>
-              </div>
+          <div class="row intro">
+            <div class="col-xs-12">
+              <?php the_sub_field('intro'); ?>
+            </div>
+          </div>
         <?php } ?>
 
         <?php if(get_sub_field('columns') == "2") { ?>
-          <div class="row gutters">
+          <div class="row">
             <?php if(get_sub_field('layout_type_2_columns') == "fiftyfifty") { ?>
               <div class="col-lg-6 col-xs-12">
                 <?php the_sub_field('column_1'); ?>
@@ -75,7 +75,7 @@
         <?php } ?>
 
         <?php if(get_sub_field('columns') == "3") { ?>
-          <div class="row gutters">
+          <div class="row">
             <?php if(get_sub_field('layout_type_3_columns') == "even") { ?>  
               <div class="col-lg-4 col-xs-12">
                 <?php the_sub_field('column_1'); ?>
@@ -127,7 +127,7 @@
         <?php } ?>
 
         <?php if(get_sub_field('columns') == "4") { ?>
-          <div class="row gutters">
+          <div class="row">
             <div class="col-xs-12 col-lg-3">
               <?php the_sub_field('column_1'); ?>
             </div>
@@ -148,6 +148,7 @@
     <?php elseif(get_row_layout() == "two_column_flexbox"): // layout: Large Quote with Background Image ?>
 
     <div id="<?php echo "scrollsection{$i}";?>" class="<?php the_sub_field('custom_class'); ?> wide-container content-section <?php the_sub_field('margin_setting'); ?>">
+      <div class="container max">
         <div class="row blockrow <?php the_sub_field('image_position');?>">
           <?php 
             $imagecolumn = wp_get_attachment_image_src(get_sub_field('image'), ''); 
@@ -162,6 +163,7 @@
                <p><?php the_sub_field('text_column');?></p>
             </div>
           </div>
+        </div>
       </div> 
     </div>
 
@@ -172,7 +174,7 @@
       
         <?php if ('yes' == get_sub_field('add_title')) { ?>   
               <div class="row title">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                   <h3 class="<?php the_sub_field('heading_type'); ?>"><?php the_sub_field('the_title'); ?></h3>
                 </div>
               </div>
@@ -180,7 +182,7 @@
 
         <?php if ('yes' == get_sub_field('add_intro')) { ?>   
             <div class="row intro">
-              <div class="col-sm-12">
+              <div class="col-xs-12">
                 <?php the_sub_field('intro'); ?>
               </div>
             </div>
@@ -210,7 +212,7 @@
       
         <?php if ('yes' == get_sub_field('add_title')) { ?>   
           <div class="row title">
-            <div class="col-sm-12">
+            <div class="col-xs-12">
               <h3 class="<?php the_sub_field('heading_type'); ?>"><?php the_sub_field('the_title'); ?></h3>
             </div>
           </div>
@@ -218,7 +220,7 @@
 
         <?php if ('yes' == get_sub_field('add_intro')) { ?>   
           <div class="row intro">
-            <div class="col-sm-12">
+            <div class="col-xs-12">
               <?php the_sub_field('intro'); ?>
             </div>
           </div>          
@@ -244,7 +246,7 @@
       
         <?php if ('yes' == get_sub_field('add_title')) { ?>   
               <div class="row title">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                   <h3 class="<?php the_sub_field('heading_type'); ?>"><?php the_sub_field('the_title'); ?></h3>
                 </div>
               </div>
@@ -252,7 +254,7 @@
 
         <?php if ('yes' == get_sub_field('add_intro')) { ?>   
             <div class="row intro">
-              <div class="col-sm-12">
+              <div class="col-xs-12">
                 <?php the_sub_field('intro'); ?>
               </div>
             </div>
@@ -260,7 +262,7 @@
         <?php } ?>
         
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-xs-12">
               <?php the_sub_field('content'); ?>
             </div>
           </div>
